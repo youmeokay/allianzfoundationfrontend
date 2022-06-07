@@ -17,7 +17,8 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "gatsby": "^4.6.1",
+    "@relate-app/strapi-plugin-gatsby": "^1.0.6",
+    "gatsby": "^4.13.1",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
     "gatsby-plugin-image": "^2.6.0",
     "gatsby-plugin-postcss": "^5.6.0",
