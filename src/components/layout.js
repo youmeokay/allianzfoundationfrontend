@@ -1,15 +1,17 @@
-import React from "react"
+import ScrollReveal from "scrollreveal"
+import React, { useEffect, useState } from "react"
+import loadable from '@loadable/component'
+import Header from "./header"
 import Footer from "./footer"
-import Navbar from "./navbar"
 
 const Layout = ({ children }) => {
   return (
-    <div class="flex min-h-screen flex-col justify-between bg-neutral-50 text-neutral-900">
-      <div>
-        <Navbar />
+    <div className="allianz-foundation">
+      <div className="inner">
+        <Header />
         {children}
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 }

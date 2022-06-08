@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
-import BlocksRenderer from "../components/blocks-renderer"
+import Modules from "../components/modules/modules"
 import Seo from "../components/seo"
 
 const ArticlePage = ({ data }) => {
@@ -21,7 +21,7 @@ const ArticlePage = ({ data }) => {
         <p className="mt-4 text-2xl text-neutral-500">{article.description}</p>
       </header>
       <main className="mt-8">
-        <BlocksRenderer blocks={article.blocks || []} />
+          <Modules modules={article.modules || []} />
       </main>
     </Layout>
   )
@@ -35,8 +35,15 @@ export const pageQuery = graphql`
       slug
       title
       description
-      blocks {
-        ...Blocks
+      modules {
+        __typename
+        ... on StrapiComponentSharedRichText {
+          body
+        }
+        ... on StrapiComponentSharedQuote {
+          title
+          body
+        }
       }
     }
   }
