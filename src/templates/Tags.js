@@ -387,6 +387,28 @@ export const pageQuery = graphql`
        ... on StrapiComponentSharedRichText {
          body
        }
+       ... on StrapiComponentSharedHorizontalGalerie {
+         id
+         horizontalentry {
+           title
+           text
+           media {
+             alternativeText
+             caption
+             name
+             mime
+             file {
+               childImageSharp {
+                 gatsbyImageData(
+                   aspectRatio: 1.7
+                   layout: FULL_WIDTH
+                   placeholder: DOMINANT_COLOR
+                 )
+               }
+             }
+           }
+         }
+       }
        ... on StrapiComponentSharedReadMore {
          headline
          text
@@ -402,7 +424,11 @@ export const pageQuery = graphql`
            mime
            file {
              childImageSharp {
-               gatsbyImageData(aspectRatio: 1.7)
+               gatsbyImageData(
+                 aspectRatio: 1.7
+                 layout: FULL_WIDTH
+                 placeholder: DOMINANT_COLOR
+               )
              }
            }
          }
@@ -458,7 +484,11 @@ export const pageQuery = graphql`
              mime
              file {
                childImageSharp {
-                 gatsbyImageData(aspectRatio: 1.25)
+                 gatsbyImageData(
+                   aspectRatio: 1.7
+                   layout: FULL_WIDTH
+                   placeholder: DOMINANT_COLOR
+                 )
                }
              }
            }
@@ -472,7 +502,11 @@ export const pageQuery = graphql`
            media {
              file {
                childImageSharp {
-                 gatsbyImageData
+                 gatsbyImageData(
+                   aspectRatio: 1.7
+                   layout: FULL_WIDTH
+                   placeholder: DOMINANT_COLOR
+                 )
                }
              }
            }
@@ -503,7 +537,11 @@ export const pageQuery = graphql`
              mime
              file {
                childImageSharp {
-                 gatsbyImageData(aspectRatio: 1.7)
+                 gatsbyImageData(
+                   aspectRatio: 1.7
+                   layout: FULL_WIDTH
+                   placeholder: DOMINANT_COLOR
+                 )
                }
              }
            }
@@ -519,7 +557,10 @@ export const pageQuery = graphql`
            file {
              url
              childImageSharp {
-               gatsbyImageData(aspectRatio: 1.7)
+               gatsbyImageData(
+                 aspectRatio: 1.7
+                 placeholder: DOMINANT_COLOR
+               )
              }
            }
          }
@@ -542,7 +583,11 @@ export const pageQuery = graphql`
            file {
              url
              childImageSharp {
-               gatsbyImageData(aspectRatio: 1.7)
+               gatsbyImageData(
+                 aspectRatio: 1.7
+                 layout: FULL_WIDTH
+                 placeholder: DOMINANT_COLOR
+               )
              }
            }
          }

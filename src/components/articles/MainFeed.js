@@ -26,7 +26,11 @@ const MainFeed = ({src, isMuted}) => {
               file {
                 url
                 childImageSharp {
-                  gatsbyImageData(aspectRatio: 1.7775)
+                  gatsbyImageData(
+                    aspectRatio: 1.7
+                    layout: FULL_WIDTH
+                    placeholder: DOMINANT_COLOR
+                  )
                 }
               }
             }
@@ -74,7 +78,11 @@ const MainFeed = ({src, isMuted}) => {
               file {
                 url
                 childImageSharp {
-                  gatsbyImageData(aspectRatio: 1.7775)
+                  gatsbyImageData(
+                    aspectRatio: 1.7
+                    layout: FULL_WIDTH
+                    placeholder: DOMINANT_COLOR
+                  )
                 }
               }
             }
@@ -112,7 +120,11 @@ const MainFeed = ({src, isMuted}) => {
               file {
                 url
                 childImageSharp {
-                  gatsbyImageData(aspectRatio: 1.7775)
+                  gatsbyImageData(
+                    aspectRatio: 1.6
+                    layout: FULL_WIDTH
+                    placeholder: DOMINANT_COLOR
+                  )
                 }
               }
             }
@@ -151,7 +163,11 @@ const MainFeed = ({src, isMuted}) => {
               file {
                 url
                 childImageSharp {
-                  gatsbyImageData(aspectRatio: 1.7775)
+                  gatsbyImageData(
+                    aspectRatio: 1.6
+                    layout: FULL_WIDTH
+                    placeholder: DOMINANT_COLOR
+                  )
                 }
               }
             }
@@ -189,7 +205,11 @@ const MainFeed = ({src, isMuted}) => {
               file {
                 url
                 childImageSharp {
-                  gatsbyImageData(aspectRatio: 1.7775)
+                  gatsbyImageData(
+                    aspectRatio: 1.6
+                    layout: FULL_WIDTH
+                    placeholder: DOMINANT_COLOR
+                  )
                 }
               }
             }
@@ -227,7 +247,11 @@ const MainFeed = ({src, isMuted}) => {
               file {
                 url
                 childImageSharp {
-                  gatsbyImageData(aspectRatio: 1.7775)
+                  gatsbyImageData(
+                    aspectRatio: 1.7
+                    layout: FULL_WIDTH
+                    placeholder: DOMINANT_COLOR
+                  )
                 }
               }
             }
@@ -265,7 +289,11 @@ const MainFeed = ({src, isMuted}) => {
               file {
                 url
                 childImageSharp {
-                  gatsbyImageData(aspectRatio: 1.7775)
+                  gatsbyImageData(
+                    aspectRatio: 1.6
+                    layout: FULL_WIDTH
+                    placeholder: DOMINANT_COLOR
+                  )
                 }
               }
             }
@@ -303,7 +331,11 @@ const MainFeed = ({src, isMuted}) => {
               file {
                 url
                 childImageSharp {
-                  gatsbyImageData(aspectRatio: 1.7775)
+                  gatsbyImageData(
+                    aspectRatio: 1.6
+                    layout: FULL_WIDTH
+                    placeholder: DOMINANT_COLOR
+                  )
                 }
               }
             }
@@ -341,7 +373,11 @@ const MainFeed = ({src, isMuted}) => {
               file {
                 url
                 childImageSharp {
-                  gatsbyImageData(aspectRatio: 1.7775)
+                  gatsbyImageData(
+                    aspectRatio: 1.7
+                    layout: FULL_WIDTH
+                    placeholder: DOMINANT_COLOR
+                  )
                 }
               }
             }
