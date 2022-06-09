@@ -11,24 +11,26 @@ const AboutPage = ({ data }) => {
     ScrollReveal().reveal('.revealer', {
       delay: 0,
       duration: 640,
-      interval: 64,
+      interval: 128,
       distance: "2rem",
        origin: 'bottom'
    });
    ScrollReveal().reveal('.revealer-from-left', {
        delay: 64,
        duration: 640,
-       interval: 64,
        distance: "2rem",
       origin: 'left'
   });
   ScrollReveal().reveal('.revealer-from-right', {
     delay: 64,
     duration: 640,
-    interval: 64,
     distance: "2rem",
     origin: 'right'
- });
+  });
+  ScrollReveal().reveal('.revealer-horizontal', {
+    delay: 64,
+    duration: 640,
+  });
   }, []);
 
   const about = data.strapiAbout
@@ -57,7 +59,7 @@ export const pageQuery = graphql`
       modules {
         __typename
         ... on StrapiComponentSharedRichText {
-          body
+          richTextBody: body
         }
         ... on StrapiComponentSharedHorizontalGalerie {
           id
@@ -82,12 +84,12 @@ export const pageQuery = graphql`
           }
         }
         ... on StrapiComponentSharedReadMore {
-          headline
-          text
+          readMoreHeadline: headline
+          readMoreText: text
         }
         ... on StrapiComponentSharedFixedMedia {
-          headline
-          text
+          fixedMediaHeadline: headline
+          fixedMediaText: text
           stickydirection
           media {
             alternativeText
@@ -115,15 +117,15 @@ export const pageQuery = graphql`
           }
         }
         ... on StrapiComponentSharedFixedText {
-          title
-          text
+          fixedTextTitle: title
+          fixedText: text
           direction
         }
         ... on StrapiComponentSharedHighlight {
-          title
-          tagline
-          link
-          linktarget
+          highlightTitle: title
+          highlightTagline: tagline
+          highlightLink: link
+          highlightLinktarget: linktarget
           file {
             alternativeText
             caption
@@ -137,15 +139,15 @@ export const pageQuery = graphql`
         }
         ... on StrapiComponentSharedLinkList {
           Link {
-            url
-            title
-            linktarget
+            linkListUrl: url
+            linkListTitle: title
+            linkListTarget: linktarget
           }
         }
         ... on StrapiComponentSharedAccordeon {
-          tagline
-          title
-          text
+          accordeonTagline: tagline
+          accordeonTitle: title
+          accordeonText: text
         }
         ... on StrapiComponentSharedCarousel {
           carouselentry {
@@ -221,7 +223,7 @@ export const pageQuery = graphql`
           }
         }
         ... on StrapiComponentSharedStage {
-          layout
+          stageLayout: layout
           media {
             alternativeText
             caption
@@ -277,8 +279,8 @@ export const pageQuery = graphql`
           }
         }
         ... on StrapiComponentSharedQuote {
-          title
-          body
+          quoteTitle: title
+          quoteBody: body
         }
       }
     }

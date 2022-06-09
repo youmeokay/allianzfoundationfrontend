@@ -5,7 +5,7 @@ const RichText = ({ data }) => {
     <article className="module-text cell medium-8">
       <div className="html-content revealer"
         dangerouslySetInnerHTML={{
-          __html: data.body,
+          __html: data.richTextBody,
         }}
       />
     </article>

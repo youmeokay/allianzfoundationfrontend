@@ -37,11 +37,11 @@ const Accordeon = ({ data }) => {
         <div className="cell medium-6">
           <div className="accordeon revealer">
             <div className="header">
-              {data.tagline && <p className="accordeon-title">{data.tagline}</p>}
-              {data.title && <h2 className="h1 accordeon-title">{data.title}</h2>}
+              {data.accordeonTagline && <p className="accordeon-title">{data.accordeonTagline}</p>}
+              {data.accordeonTitle && <h2 className="h1 accordeon-title">{data.accordeonTitle}</h2>}
             </div>
             <div className="hidden-content accordeon-title">
-              <div dangerouslySetInnerHTML={{__html: data.text}} />
+              <div dangerouslySetInnerHTML={{__html: data.accordeonText}} />
             </div>
           </div>
         </div>

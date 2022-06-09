@@ -5,7 +5,7 @@ import 'plyr/dist/plyr.css'
 const Stage = ({ data }) => {
 
   const isVideo = data.media.mime.startsWith("video")
-  const isFullscreen = data.layout.startsWith("FullScreen")
+  const isFullscreen = data.stageLayout.startsWith("FullScreen")
 
   useEffect(() => {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {

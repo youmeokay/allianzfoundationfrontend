@@ -90,7 +90,8 @@
   .topic-nav a,
   .geo-feed, .delay-revealer, .contact-page,
   .standing-revealer, .topic-nav, .revealer-from-left,
-  .revealer-from-right, .revealer { visibility: hidden; }
+  .revealer-from-right, .revealer-horizontal,
+  .revealer { visibility: hidden; }
 
 
 

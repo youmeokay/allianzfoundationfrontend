@@ -37,12 +37,12 @@ const ReadMore = ({ data }) => {
     <article className="module-text cell medium-8">
       <div className=" readmore html-content revealer">
 
-        <div className="readmore-header" dangerouslySetInnerHTML={{__html: data.headline}} />
-        <div className={`readmore-content ${ open ? "open" : "" }`} dangerouslySetInnerHTML={{__html: data.text}}/>
+        <div className="readmore-header" dangerouslySetInnerHTML={{__html: data.readMoreHeadline}} />
+        <div className={`readmore-content ${ open ? "open" : "" }`} dangerouslySetInnerHTML={{__html: data.readMoreText}}/>
 
         <div className="readmore-toggle text-center">Read more</div>
         <div className="readless-toggle text-center">Hide</div>
-        
+
       </div>
     </article>
   )

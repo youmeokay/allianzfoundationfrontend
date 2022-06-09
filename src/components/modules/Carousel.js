@@ -9,7 +9,7 @@ import { Pagination, Navigation } from "swiper";
 const Carousel = ({ data }) => {
 
   return (
-    <article className="module-carousel cell">
+    <article className="module-carousel cell revealer">
       <Swiper
         spaceBetween={15}
         slidesPerView={1.33}

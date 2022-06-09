@@ -41,8 +41,8 @@ const FixedMedia = ({ data }) => {
               </div>
               <div className="cell medium-offset-1 medium-5">
                 <div className="scroll-content">
-                  {data.headline && <h2><b>{data.headline}</b></h2>}
-                  {data.text && <div dangerouslySetInnerHTML={{__html: data.text}} />}
+                  {data.fixedMediaHeadline && <h2><b>{data.fixedMediaHeadline}</b></h2>}
+                  <div dangerouslySetInnerHTML={{__html: data.fixedMediaText}} />
                 </div>
               </div>
             </div>
@@ -50,8 +50,8 @@ const FixedMedia = ({ data }) => {
             <div className="grid-x grid-margin-x">
               <div className="cell medium-5 medium-order-1 small-order-2">
                 <div className="scroll-content">
-                  {data.headline && <h2><b>{data.headline}</b></h2>}
-                  {data.text && <div dangerouslySetInnerHTML={{__html: data.text}} />}
+                  {data.fixedMediaHeadline && <h2><b>{data.fixedMediaHeadline}</b></h2>}
+                  <div dangerouslySetInnerHTML={{__html: data.fixedMediaText}} />
                 </div>
               </div>
               <div className="medium-offset-1 cell medium-6 medium-order- small-order-1">
@@ -96,8 +96,8 @@ const FixedMedia = ({ data }) => {
               </div>
               <div className="cell medium-offset-1 medium-5">
                 <div className="scroll-content">
-                  {data.headline && <h2><b>{data.headline}</b></h2>}
-                  {data.text && <div dangerouslySetInnerHTML={{__html: data.text}} />}
+                  {data.fixedMediaHeadline && <h2><b>{data.fixedMediaHeadline}</b></h2>}
+                  <div dangerouslySetInnerHTML={{__html: data.fixedMediaText}} />
                 </div>
               </div>
             </div>
@@ -105,8 +105,8 @@ const FixedMedia = ({ data }) => {
             <div className="grid-x grid-margin-x">
               <div className="cell medium-5 medium-order-1 small-order-2">
                 <div className="scroll-content">
-                  {data.headline && <h2><b>{data.headline}</b></h2>}
-                  {data.text && <div dangerouslySetInnerHTML={{__html: data.text}} />}
+                  {data.fixedMediaHeadline && <h2><b>{data.fixedMediaHeadline}</b></h2>}
+                  <div dangerouslySetInnerHTML={{__html: data.fixedMediaText}} />
                 </div>
               </div>
               <div className="medium-offset-1 cell medium-6 medium-order-2 small-order-1">
