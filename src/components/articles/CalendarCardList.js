@@ -21,11 +21,7 @@ const CalendarCardList = ({ article }) => {
         <div className="grid-x">
           <div className="cell medium-6">
             <div className="calendar-content">
-              {article.eventdate &&
-                <div class="event-date">
-                  <h3>{article.eventdate}</h3>
-                </div>
-              }
+              <div class="event-date"><h3>{article.eventdate}</h3></div>
               <h2>{article.title}</h2>
               <p>{article.description}</p>
             </div>
@@ -55,6 +51,7 @@ export const query = graphql`
     slug
     title
     description
+    eventdate
     tags {
       name
       slug

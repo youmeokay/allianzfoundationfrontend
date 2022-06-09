@@ -26,6 +26,7 @@ const ArticlePage = ({ data }) => {
   const isVideo = article.cover.mime.startsWith("video")
   const isFullscreen = article.layout.startsWith("FullScreen")
   const isEvent = article.options.startsWith("Event")
+  const isEventDate = article.eventdate.startsWith("2")
   const isCall = article.options.startsWith("Call")
   const isNews = article.options.startsWith("News")
 
@@ -133,6 +134,7 @@ const ArticlePage = ({ data }) => {
                     </div>
                     <div className="articleDesc">
                       <h1><b>{article.title}</b></h1>
+  
                       <p>{article.description}</p>
                     </div>
                   </div>
@@ -160,7 +162,7 @@ const ArticlePage = ({ data }) => {
                     </div>
                     <div className="articleDesc">
                       <h1><b>{article.title}</b></h1>
-                      {isEvent ? (
+                      {isEventDate ? (
                         <div className="articleMeta">
                         <ul className="menu simple align-center">
                           <li>
@@ -219,7 +221,6 @@ const ArticlePage = ({ data }) => {
               </div>
             </article>
           </section>
-
           {data.calendar.nodes  &&
             <article className="grid-container full calendarfeedgrid">
               <CalendarFeed articles={data.calendar.nodes} />
@@ -588,6 +589,7 @@ export const pageQuery = graphql`
       description
       options
       layout
+      eventdate
       updatedAt
       createdAt
       publishedAt

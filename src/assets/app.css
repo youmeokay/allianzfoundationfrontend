@@ -1497,7 +1497,7 @@
   margin-bottom: calc(var(--padding) * .25);
   margin-top: calc(var(--padding) * .25)}
 .event-date {
-  position: relative; left: calc(var(--padding) * -0.57);
+  position: relative; left: -34px; width: calc(100% + 34px);
   padding-left: calc(var(--padding) * .57); padding-bottom: 8px;
   background: white;  border-bottom: 4px solid var(--dark); z-index: 1; }
 .event-date h3 {
