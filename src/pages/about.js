@@ -1,8 +1,8 @@
 import ScrollReveal from "scrollreveal"
 import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/layout/Layout"
+import Seo from "../components/helpers/Seo"
 import AllModules from "../components/modules/AllModules"
 
 const AboutPage = ({ data }) => {

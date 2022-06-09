@@ -1,12 +1,10 @@
 import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/layout/Layout"
 
 const NotFoundPage = () => {
-
   return (
     <Layout>
-
       <section className="module-text revealer">
         <article className="grid-container full">
           <div className="grid-x height align-middle align-center">
@@ -17,7 +15,6 @@ const NotFoundPage = () => {
           </div>
         </article>
       </section>
-
     </Layout>
   )
 }
