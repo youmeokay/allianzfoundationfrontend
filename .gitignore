@@ -67,3 +67,8 @@ package-lock.json
 !themes/gatsby-starter-theme-workspace/package-lock.json
 
 .parcel-cache
+
+.env
+.env.development
+/node_modules/
+/node_modules
