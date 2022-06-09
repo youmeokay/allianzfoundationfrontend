@@ -17,7 +17,7 @@ const Stage = ({ data }) => {
   return (
     <>
       {isFullscreen ? (
-        <article className="module-stage fullScreen standing-revealer">
+        <article className="module-stage fullScreen revealer">
           {isVideo ? (
             <>
               <div className="stage-media">

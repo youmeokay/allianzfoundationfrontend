@@ -90,7 +90,7 @@
   .topic-nav a,
   .geo-feed, .delay-revealer, .contact-page,
   .standing-revealer, .topic-nav, .revealer-from-left,
-  .revealer { visibility: hidden; }
+  .revealer-from-right, .revealer { visibility: hidden; }
 
 
 
@@ -105,6 +105,12 @@
 
   .allianz-foundation section.modules article:first-child {margin-top: calc(var(--headerDesktop) * 0.5);}
   .allianz-foundation section.modules article.module-stage:first-child {margin-top: 0;}
+  .allianz-foundation section:nth-child(4) article:first-child {margin-top:0 !important;}
+
+  .allianz-foundation section.post.modules article.module-article-intro:first-child {margin-top: 0;}
+  .allianz-foundation section.post.modules article.module-article-intro.noFullScreen:first-child {
+    margin-top: var(--sectionPaddings); padding-top: calc(var(--headerDesktop) * 0.25);}
+
 
   .tag-feed, .list-feed, .calendar-feed  {margin-top: calc(var(--sectionPaddings) * 1);}
   .contact-page {margin-top: calc(var(--sectionPaddings) * 1); padding-top: calc(var(--headerDesktop) * 0.5);}
@@ -217,7 +223,7 @@
 * ***/
 
   .html-content h1 {
-    font-weight: normal; margin-bottom: calc(var(--padding) * 0.5);}
+    font-weight: normal; margin-bottom: calc(var(--padding) * 0.75);}
   .html-content h2, .html-content h3 {
     margin-top: calc(var(--padding) * .25);
     margin-bottom: calc(var(--padding) * 0.25);}
@@ -233,6 +239,8 @@
 
 .html-content h1:last-of-type {
   margin-bottom:0;}
+.html-content.readmore h1:last-of-type {
+  margin-bottom: calc(var(--padding) * 0.75);}
 
 /* ***
 *** gatsby-image stuff ***
@@ -299,6 +307,8 @@
   header.main.small .text-logo {
     top: -2px; padding-top: calc(var(--padding) * .25);
     padding-bottom: calc(var(--padding) * .25);}
+
+  .logo-link {display: inline-block;}
 
 
 /* ***
@@ -511,6 +521,7 @@
 * ***/
 
   .pole-position {
+    overflow: hidden;
     padding: calc(var(--sectionPaddings) * .5) 0 calc(var(--sectionPaddings) * .5) 0;}
   .pole-position {margin-right: -30px;}
 
@@ -654,13 +665,10 @@
 
   .calendar-card .grid-x  {height: 100%;}
   .calendar-card { border-top: 4px solid var(--dark);padding: 0;}
-  .calendar-grid .calendar-card:last-child {border-bottom: 4px solid var(--dark);}
+  .calendar-feed .calendar-card:last-child {border-bottom: 4px solid var(--dark);}
   .calendar-card .articleDesc {max-width: none; padding-left: calc(var(--padding) * 1);}
   .calendar-card .articleImage {padding-left: calc(var(--padding) * 0.5);}
-  .calendar-card .articleDesc h2 {
-    padding: calc(var(--padding) * 0.25) 0;
-    position: relative; top: -7px;
-    font-size: calc(var(--text-medium) * 1.5); }
+  .calendar-card .articleDesc h2 {padding: calc(var(--padding) * 0.25) 0; position: relative; top: -7px; font-size: calc(var(--text-medium) * 1.5);}
 
 
 /* ***
@@ -809,56 +817,6 @@
 * ***/
 
   .module-carousel .gatsby-image-wrapper img {height: 80vh;}
-
-
-
-/* ***
-*** horizontal carousel ***
-* ***/
-
-  .sticky-parent {
-    height: 200vw;}
-  .sticky {
-    padding-top: var(--sectionPaddings);
-    position: sticky;
-    top: 0px;
-    /* max-height: 50vh; */
-    overflow-x: hidden;
-    overflow-y: hidden;}
-  .dim {
-    min-width: 50%;}
-  .horizontal::before {
-    content: "";
-    position: absolute;
-    width: auto;
-    height: 100%;
-    left: -50%;
-    z-index: -1;
-    background: url("./line-background.svg") repeat-x 50% 25%;
-    transform: rotate(7deg);
-  }
-  .horizontal::after {
-    display: none;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 130%;
-    z-index: -1;
-    background: url("./line-background.svg") repeat-x 50% 35%;
-    transform: rotate(-7deg);
-  }
-  .dim.spacer {
-    min-width: calc(var(--padding) * 4);
-    padding-left: calc(var(--padding) * 0.25);}
-  .dim.end {
-    min-width: 50vw;}
-  .horizontal {
-    width: 100vw;
-    display: flex;}
-
-  .horizontal p { margin-top: calc(var(--padding) * 0.25);}
-  .horizontal p {max-width: 75%;}
 
 
 
@@ -1056,7 +1014,7 @@
     visibility: visible; height: auto;}
 
   .readmore-toggle {
-    padding-top: calc(var(--padding) * 0.5);
+    padding-top: calc(var(--padding) * 0.25);
     font-weight: bold; cursor: pointer;
     font-size: var(--text-medium); font-weight: bold;
     letter-spacing: -0.1px;
@@ -1066,7 +1024,7 @@
 
   .readless-toggle {
     transition: all 0ms var(--ease);
-    transform: translate(0,100%);
+    transform: translate(0,-100%);
     opacity: 0; visibility: hidden;
     font-weight: bold; cursor: pointer;
     font-size: var(--text-medium); font-weight: bold;
@@ -1083,7 +1041,7 @@
 
   .readmore-content * {
     transition: all 0ms var(--ease);
-    transform: translate(0,10%);
+    transform: translate(0,-10%);
     opacity: 0; visibility: hidden;}
   .readmore-content.open * {
     transition: all 640ms var(--ease);
@@ -1473,28 +1431,30 @@
 
 /* horizontal scrolltrigger */
 
-.module-horizontal-scrolltrigger {
-  height: 100%; width: 100%; overflow-x: hidden;}
-.module-horizontal-scrolltrigger .html-content {
-  max-width: 90%; margin-top: calc(var(--padding) * 0.25);}
+.module-horizontal-scrolltrigger, .module-horizontal-calendar-list {
+  margin-top: var(--sectionPaddings);
+  width: 100%; overflow-x: hidden;}
+.module-horizontal-scrolltrigger p {
+  margin-bottom:0; max-width: 85%;}
 
 .horizontal-container {
   overscroll-behavior: none;
   overflow-x: hidden;
-  width: 150%;
-  height: 100vh;
   display: flex;
   flex-wrap: nowrap;
-  background: url("./line-background.svg") repeat-x;
+  background: url("./line-background.svg") no-repeat;
   background-attachment:  scroll;
   background-position-y: 50%;}
+.horizontal-container.in-calendar {
+  background: none;}
 
-.panel {
-  margin-top: var(--sectionPaddings);
-  height: auto; width: 100%;}
+.panel {width: 100%;}
+.panel .grid-x {padding: 0 10%;}
+.panel .gatsby-image-wrapper {margin-bottom: calc(var(--padding) * 0.25);}
 
-.panel .grid-x {
-  padding: 0 calc(var(--padding) * 1.5);}
+.in-calendar .panel:first-of-type .calendar-card-list {border-left-color: transparent; border-radius: 0;}
+.in-calendar .panel .grid-x {padding:0;}
+.in-calendar .panel .gatsby-image-wrapper {margin-bottom: 0;}
 
 .horizontal-container.one {width: 100%;}
 .horizontal-container.two {width: 150%;}
@@ -1507,14 +1467,22 @@
 .horizontal-container.nine {width: 500%;}
 .horizontal-container.ten {width: 550%;}
 
-@media screen and (max-width: 1080px) {
-  .panel .grid-x {
-    padding: 0 calc(var(--padding) * .5);}
-  .horizontal-container {
-    width: 500%;
-    background-position-y: 70%;}
-  .panel {
-    margin-top: calc(var(--sectionPaddings) * 0.5);}
+@media screen and (max-width: 640px) {
+
+  .module-horizontal-scrolltrigger p {max-width: none;}
+  .panel .grid-x {padding: 0 calc(var(--padding) * 0.5);}
+
+  .horizontal-container {background-position-x: 10%;background-position-y: 20%;}
+  .horizontal-container.two {width:200%;}
+  .horizontal-container.three {width:250%;}
+  .horizontal-container.four {width: 300%;}
+  .horizontal-container.five {width: 350%;}
+  .horizontal-container.six {width: 400%;}
+  .horizontal-container.seven {width: 450%;}
+  .horizontal-container.eight {width: 500%;}
+  .horizontal-container.nine {width: 550%;}
+  .horizontal-container.ten {width: 600%;}
+
 }
 
 
@@ -1534,26 +1502,6 @@
   font-weight: normal; text-transform: none;
   padding:0; margin:0; position: relative; top: -8px; }
 
-.all-modules.in-calendar {
-  margin-bottom: var(--sectionPaddings);}
-.module-horizontal-calendar-list {
-  overflow-x: hidden; width: 100%;}
-
-.horizontal-container-calendar {
-  overscroll-behavior: none;
-  overflow-x: hidden;
-  width: 300%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: nowrap;}
-
-.panel-calendar {
-  height: 100vh; width: 100%;}
-.panel-calendar .grid-x.test {
-  height: 100vh;}
-.panel-calendar:first-of-type {
-  margin-left: calc(var(--padding) * 0.5);}
-
 .calendar-card-list {
   display: block;
   border-left: 4px solid var(--dark);
@@ -1566,38 +1514,70 @@
   margin-bottom: calc(var(--padding) * 0.5);
   padding: 0 calc(var(--padding) * 0.5);}
 
-.calendarfeedgrid {margin-bottom: var(--sectionPaddings);margin-top: var(--sectionPaddings);}
+.horizontal-container.in-calendar.two {width: 150%;}
+.horizontal-container.in-calendar.three {width: 200%;}
+.horizontal-container.in-calendar.four {width: 250%;}
+.horizontal-container.in-calendar.five {width: 300%;}
+.horizontal-container.in-calendar.six {width: 350%;}
+.horizontal-container.in-calendar.seven {width: 400%;}
+.horizontal-container.in-calendar.eight {width: 450%;}
+.horizontal-container.in-calendar.nine {width: 500%;}
+.horizontal-container.in-calendar.ten {width: 550%;}
+.horizontal-container.in-calendar.eleven {width: 600%;}
+.horizontal-container.in-calendar.twelfe {width: 650%;}
+.horizontal-container.in-calendar.thirdteen {width: 700%;}
+.horizontal-container.in-calendar.fourteen {width: 750%;}
+.horizontal-container.in-calendar.fivteen {width: 800%;}
+.horizontal-container.in-calendar.sixteen {width: 850%;}
+.horizontal-container.in-calendar.seventeen {width: 900%;}
+.horizontal-container.in-calendar.eighteen {width: 950%;}
+.horizontal-container.in-calendar.nineteen {width: 1000%;}
+.horizontal-container.in-calendar.twenty {width: 1050%;}
+.horizontal-container.in-calendar.twentyone {width: 1100%;}
+.horizontal-container.in-calendar.twentytwo {width: 1150%;}
+.horizontal-container.in-calendar.twentythree {width: 1200%;}
+.horizontal-container.in-calendar.twentyfour {width: 1250%;}
+.horizontal-container.in-calendar.twentyfive {width: 1300%;}
+.horizontal-container.in-calendar.twentysix {width: 1350%;}
+.horizontal-container.in-calendar.twentyseven {width: 1400%;}
+.horizontal-container.in-calendar.twentyeight {width: 1450%;}
+.horizontal-container.in-calendar.twentynine {width: 1500%;}
+.horizontal-container.in-calendar.thirtee {width: 1550%;}
 
-.horizontal-container-calendar.two {width: 150%;}
-.horizontal-container-calendar.three {width: 200%;}
-.horizontal-container-calendar.four {width: 250%;}
-.horizontal-container-calendar.five {width: 300%;}
-.horizontal-container-calendar.six {width: 350%;}
-.horizontal-container-calendar.seven {width: 400%;}
-.horizontal-container-calendar.eight {width: 500%;}
-.horizontal-container-calendar.nine {width: 550%;}
-.horizontal-container-calendar.ten {width: 600%;}
-.horizontal-container-calendar.eleven {width: 650%;}
-.horizontal-container-calendar.twelfe {width: 700%;}
-.horizontal-container-calendar.thirdteen {width: 750%;}
-.horizontal-container-calendar.fourteen {width: 800%;}
-.horizontal-container-calendar.fivteen {width: 850%;}
-.horizontal-container-calendar.sixteen {width: 900%;}
-.horizontal-container-calendar.seventeen {width: 950%;}
-.horizontal-container-calendar.eighteen {width: 1000%;}
-.horizontal-container-calendar.nineteen {width: 1050%;}
-.horizontal-container-calendar.twenty {width: 1100%;}
-.horizontal-container-calendar.twentyone {width: 1150%;}
-.horizontal-container-calendar.twentytwo {width: 1200%;}
-.horizontal-container-calendar.twentythree {width: 1250%;}
-.horizontal-container-calendar.twentyfour {width: 1300%;}
-.horizontal-container-calendar.twentyfive {width: 1350%;}
-.horizontal-container-calendar.twentysix {width: 1400%;}
-.horizontal-container-calendar.twentyseven {width: 1450%;}
-.horizontal-container-calendar.twentyeight {width: 1500%;}
-.horizontal-container-calendar.twentynine {width: 1550%;}
-.horizontal-container-calendar.thirtee {width: 1600%;}
 
+@media screen and (max-width: 640px) {
+
+  .horizontal-container.in-calendar.two {width: 200%;}
+  .horizontal-container.in-calendar.three {width: 250%;}
+  .horizontal-container.in-calendar.four {width: 300%;}
+  .horizontal-container.in-calendar.five {width: 350%;}
+  .horizontal-container.in-calendar.six {width: 400%;}
+  .horizontal-container.in-calendar.seven {width: 450%;}
+  .horizontal-container.in-calendar.eight {width: 500%;}
+  .horizontal-container.in-calendar.nine {width: 550%;}
+  .horizontal-container.in-calendar.ten {width: 600%;}
+  .horizontal-container.in-calendar.eleven {width: 650%;}
+  .horizontal-container.in-calendar.twelfe {width: 700%;}
+  .horizontal-container.in-calendar.thirdteen {width: 750%;}
+  .horizontal-container.in-calendar.fourteen {width: 800%;}
+  .horizontal-container.in-calendar.fivteen {width: 850%;}
+  .horizontal-container.in-calendar.sixteen {width: 900%;}
+  .horizontal-container.in-calendar.seventeen {width: 950%;}
+  .horizontal-container.in-calendar.eighteen {width: 1000%;}
+  .horizontal-container.in-calendar.nineteen {width: 1050%;}
+  .horizontal-container.in-calendar.twenty {width: 1100%;}
+  .horizontal-container.in-calendar.twentyone {width: 1150%;}
+  .horizontal-container.in-calendar.twentytwo {width: 1200%;}
+  .horizontal-container.in-calendar.twentythree {width: 1250%;}
+  .horizontal-container.in-calendar.twentyfour {width: 1300%;}
+  .horizontal-container.in-calendar.twentyfive {width: 1350%;}
+  .horizontal-container.in-calendar.twentysix {width: 1400%;}
+  .horizontal-container.in-calendar.twentyseven {width: 1450%;}
+  .horizontal-container.in-calendar.twentyeight {width: 1500%;}
+  .horizontal-container.in-calendar.twentynine {width: 1550%;}
+  .horizontal-container.in-calendar.thirtee {width: 1600%;}
+
+}
 
 
 /* mobile tablets */
@@ -1796,7 +1776,8 @@
         .module-highlight, .module-accordeon {
           padding-top: calc(var(--sectionPaddings) * 0.5);}
         .scroll-content, .sticky-content .sticky-inner {padding-top:0;}
-        .module-stage, .module-quote {margin-top: calc(var(--sectionPaddings) * 0.5);}
+        .module-stage, .module-quote, .module-horizontal-scrolltrigger,
+        .module-horizontal-calendar-list, .tag-feed, .list-feed, .calendar-feed {margin-top: calc(var(--sectionPaddings) * 0.5);}
         .module-text .medium-8 {width: 100%;}
 
 
@@ -1906,5 +1887,6 @@
         .footleft, .footright {padding: calc(var(--padding) * .5) calc(var(--padding) * .25);}
         .button {position: relative; right: -2px;}
 
+        .calendar-card .articleDesc h2 {padding: calc(var(--padding) * 0.25) 0; position: relative; top: -7px; font-size: calc(var(--text-medium) * 1);}
 
       }
