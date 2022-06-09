@@ -1442,6 +1442,7 @@
   overscroll-behavior: none;
   overflow-x: hidden;
   display: flex;
+  width: 50%;
   flex-wrap: nowrap;
   background: url("./line-background.svg") no-repeat;
   background-attachment:  scroll;

@@ -47,7 +47,7 @@ const CalendarFeedList = ({ articles }) => {
   return (
     <>
       {articles.length == 1 &&
-        <div class="horizontal-container in-calendar two" id="trigger">
+        <div class="horizontal-container in-calendar" id="trigger">
           {articles.map((article) => (
             <div className="panel">
               <CalendarCardList article={article} />
