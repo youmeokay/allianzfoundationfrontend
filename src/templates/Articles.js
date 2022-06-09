@@ -26,7 +26,6 @@ const ArticlePage = ({ data }) => {
   const isVideo = article.cover.mime.startsWith("video")
   const isFullscreen = article.layout.startsWith("FullScreen")
   const isEvent = article.options.startsWith("Event")
-  const isEventDate = article.eventdate.startsWith("2")
   const isCall = article.options.startsWith("Call")
   const isNews = article.options.startsWith("News")
 
@@ -134,7 +133,7 @@ const ArticlePage = ({ data }) => {
                     </div>
                     <div className="articleDesc">
                       <h1><b>{article.title}</b></h1>
-  
+
                       <p>{article.description}</p>
                     </div>
                   </div>
@@ -162,21 +161,11 @@ const ArticlePage = ({ data }) => {
                     </div>
                     <div className="articleDesc">
                       <h1><b>{article.title}</b></h1>
-                      {isEventDate ? (
-                        <div className="articleMeta">
-                        <ul className="menu simple align-center">
-                          <li>
-                            <svg className="icon-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 20h-4v-4h4v4zm-6-10h-4v4h4v-4zm6 0h-4v4h4v-4zm-12 6h-4v4h4v-4zm6 0h-4v4h4v-4zm-6-6h-4v4h4v-4zm16-8v22h-24v-22h3v1c0 1.103.897 2 2 2s2-.897 2-2v-1h10v1c0 1.103.897 2 2 2s2-.897 2-2v-1h3zm-2 6h-20v14h20v-14zm-2-7c0-.552-.447-1-1-1s-1 .448-1 1v2c0 .552.447 1 1 1s1-.448 1-1v-2zm-14 2c0 .552-.447 1-1 1s-1-.448-1-1v-2c0-.552.447-1 1-1s1 .448 1 1v2z"/></svg>
-                            <b>{article.eventdate}</b>
-                          </li>
-                        </ul>
-                        </div>
-                      ) : (
-                        <></>
-                      )}
+                      {article.eventdate &&
+                        <div className="articleMeta"><ul className="menu simple align-center"><li><svg className="icon-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 20h-4v-4h4v4zm-6-10h-4v4h4v-4zm6 0h-4v4h4v-4zm-12 6h-4v4h4v-4zm6 0h-4v4h4v-4zm-6-6h-4v4h4v-4zm16-8v22h-24v-22h3v1c0 1.103.897 2 2 2s2-.897 2-2v-1h10v1c0 1.103.897 2 2 2s2-.897 2-2v-1h3zm-2 6h-20v14h20v-14zm-2-7c0-.552-.447-1-1-1s-1 .448-1 1v2c0 .552.447 1 1 1s1-.448 1-1v-2zm-14 2c0 .552-.447 1-1 1s-1-.448-1-1v-2c0-.552.447-1 1-1s1 .448 1 1v2z"/></svg><b>{article.eventdate}</b></li></ul></div>
+                      }
                       <p>{article.description}</p>
                     </div>
-
                   </div>
                 </div>
                 <div className="cell medium-9 revealer">
