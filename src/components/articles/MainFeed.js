@@ -800,7 +800,7 @@ const MainFeed = ({src, isMuted}) => {
                     playsinline
                     autoplay
                     loop>
-                    <source src="${brsrticle.videocover.file.url}" type="video/mp4" />
+                    <source src="${brsarticle.videocover.file.url}" type="video/mp4" />
                   </video>` }}
               />
             ) : (
