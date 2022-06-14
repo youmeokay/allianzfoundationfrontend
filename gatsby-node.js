@@ -44,19 +44,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  // const articles = result.data.allStrapiArticle.nodes
-  // if (articles.length > 0) {
-  //   articles.forEach((article) => {
-  //     createPage({
-  //       path: `/${article.slug}`,
-  //       component: articlePost,
-  //       context: {
-  //         slug: article.slug,
-  //       },
-  //     })
-  //   })
-  // }
-
   const enArticles = result.data.enArticles.nodes
   const deArticles = result.data.deArticles.nodes
 

@@ -33,6 +33,8 @@ const ArticlePage = ({ data }) => {
   const isCall = article.options.startsWith("Call")
   const isNews = article.options.startsWith("News")
 
+  const hasIntl = data.strapiArticle.localizations
+
   const seo = {
     metaTitle: article.title,
     metaDescription: article.description,
@@ -170,7 +172,6 @@ const ArticlePage = ({ data }) => {
 
   return (
     <Layout as="article">
-
     <header className={`main header ${
           small ? "small" : ""
         }`}>
@@ -185,11 +186,17 @@ const ArticlePage = ({ data }) => {
         </Link>
         <nav className="language">
           <ul className="menu simple language-selector">
-            {article.localizations.map((article) => (
-              <li>
-                <Link to={`/de/${article.slug}`} className="lang-link">DE</Link>
-              </li>
-            ))}
+            {hasIntl ? (
+              <>
+              {article.localizations.map((article) => (
+                <li>
+                  <Link to={`/de/${article.slug}`} className="lang-link">DE</Link>
+                </li>
+              ))}
+              </>
+            ) : (
+              <></>
+            )}
           </ul>
         </nav>
         <Link to="/search" className="search-icon">
@@ -201,7 +208,6 @@ const ArticlePage = ({ data }) => {
           </div>
         </nav>
     </header>
-
     <Hamburger />
     <Helmet bodyAttributes={{class: "posts"}}/>
       <Seo seo={seo} />
