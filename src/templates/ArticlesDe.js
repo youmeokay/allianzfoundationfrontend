@@ -187,7 +187,7 @@ const ArticlePage = ({ data }) => {
           <ul className="menu simple language-selector">
             {article.localizations.map((article) => (
               <li>
-                <Link to={`/${article.slug}`} className="lang-link">EN</Link>
+                <Link to={`/de/${article.slug}`} className="lang-link">EN</Link>
               </li>
             ))}
           </ul>
@@ -237,7 +237,7 @@ const ArticlePage = ({ data }) => {
                   <div className="post-header revealer" id="postHeader">
                     <div className="articleTags">
                       {article.tags.map((tag, i) => (
-                        <Link to={`/${tag.slug}`} className="deactivated" key={`tag__${tag.id}`}>
+                        <Link to={`/de/${tag.slug}`} className="deactivated" key={`tag__${tag.id}`}>
                           <h3>
                               {tag.name}
                           </h3>
@@ -265,7 +265,7 @@ const ArticlePage = ({ data }) => {
                   <div className="post-header">
                     <div className="articleTags">
                       {article.tags.map((tag, i) => (
-                        <Link to={`/${tag.slug}`} className="deactivated" key={`tag__${tag.id}`}>
+                        <Link to={`/de/${tag.slug}`} className="deactivated" key={`tag__${tag.id}`}>
                           <h3>
                               {tag.name}
                           </h3>
