@@ -407,7 +407,7 @@
 * ***/
 
   .language {
-    top: 26px; position: fixed; right: calc(var(--padding) * 2 + 44px);}
+    top: 25px; position: fixed; right: calc(var(--padding) * 2 + 44px);}
   .language .menu a {
     font-size: var(--text-medium); padding:0;}
   .language .menu li + li {margin:0 0 0 12px;}
@@ -461,7 +461,7 @@
     transition: all 256ms var(--ease);}
 
   .small .language {
-    top: 14px;}
+    top: 13px;}
   .small .search-icon {
     top: 17px;}
   .small .hamburger {
@@ -873,7 +873,7 @@
     position: relative; top: 4px;
     cursor: pointer; padding: calc(var(--padding) * 0.2) calc(var(--padding) * 0.5) calc(var(--padding) * 0.23) calc(var(--padding) * 0.5);
     border:0; background: var(--dark);
-    color: white; line-height: 1;
+    color: white; line-height: 1;min-width: 100%;
     font-size: var(--text); font-weight: 500;}
   .button:hover,
   .button:focus {
@@ -1102,6 +1102,11 @@
     right: -150px; top: 238px;
     transform: rotate(-25deg) translate(3px, 69px);}
 
+/* ***
+*** new language selector ***
+* ***/
+
+.lang-selector-new {margin-top: var(--sectionPaddings);}
 
 
 /* ***

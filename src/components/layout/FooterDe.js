@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="cell medium-4 newsletter">
           <div className="grid-x align-center">
             <div className="cell small-6">
-              <p>Subscribe to our newsletter and stay in touch:</p>
+              <p>Abonnieren Sie unseren Newsletter:</p>
             </div>
           </div>
           <div className="newsletter-form grid-x align-bottom">
@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="cell small-2">
-              <input type="submit" className="button" value="Send"/>
+              <input type="submit" className="button" value="Senden"/>
             </div>
           </div>
         </div>
@@ -26,17 +26,17 @@ const Footer = () => {
           <nav className="footleft">
             <ul className="menu simple">
               <li>
-                <Link to="/going-local">
+                <Link to="/de/going-local">
                   Going local
                 </Link>
               </li>
               <li>
-                <Link to="/news">
+                <Link to="/de/news">
                   News
                 </Link>
               </li>
               <li>
-                <Link to="/jobs" >
+                <Link to="/de/jobs" >
                   Jobs
                 </Link>
               </li>
@@ -47,18 +47,18 @@ const Footer = () => {
           <nav className="footright">
             <ul className="menu simple">
             <li>
-              <Link to="/contact">
-                Contact
+              <Link to="/de/contact">
+                Kontakt
               </Link>
             </li>
               <li>
-                <Link to="/privacy">
-                  Privacy policy
+                <Link to="/de/privacy">
+                  Datenschutz
                 </Link>
               </li>
               <li>
-                <Link to="/imprint">
-                  Imprint
+                <Link to="/de/imprint">
+                  Impressum
                 </Link>
               </li>
             </ul>

@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import 'plyr/dist/plyr.css'
 
-const ArticleCard = ({ article, src, isMuted }) => {
+const ArticleCard = ({ article }) => {
 
   const isVideo = article.cover.mime.startsWith("video")
 

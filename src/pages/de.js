@@ -1,22 +1,23 @@
+import ScrollReveal from "scrollreveal"
 import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout/Layout"
-import Footer from "../components/layout/Footer"
-import Header from "../components/layout/Header"
-import Hamburger from "../components/navigation/Hamburger"
+import FooterDe from "../components/layout/FooterDe"
+import HeaderDe from "../components/layout/HeaderDe"
+import HamburgerDe from "../components/navigation/HamburgerDe"
 import Seo from "../components/helpers/Seo"
-import Highlights from "../components/navigation/Highlights"
-import Topics from "../components/navigation/Topics"
+import HighlightsDe from "../components/navigation/HighlightsDe"
+import TopicsDe from "../components/navigation/TopicsDe"
 import ArticleCard from "../components/articles/ArticleCard"
-import PolePosition from "../components/articles/PolePosition"
-import MainFeed from "../components/articles/MainFeed"
+import PolePositionDe from "../components/articles/PolePositionDe"
+import MainFeedDe from "../components/articles/MainFeedDe"
 
 const IndexPage = () => {
 
   const { strapiGlobal } = useStaticQuery(graphql`
     query {
-      strapiGlobal(locale: {eq: "en"}) {
+      strapiGlobal(locale: {eq: "de"}) {
         locale
         siteName
         siteDescription
@@ -25,24 +26,61 @@ const IndexPage = () => {
   `)
 
   const seo = {
-    metaTitle: "Home",
+    metaTitle: "Start",
     metaDescription: strapiGlobal.siteDescription,
   }
 
+  useEffect(() => {
+     ScrollReveal().reveal('.highlight-nav li', {
+        delay: 0,
+        duration: 320,
+        interval: 64,
+        distance: "2rem",
+        origin: 'left',
+    });
+    ScrollReveal().reveal('.topic-nav', {
+       delay: 320,
+       duration: 640,
+       distance: "2rem",
+       origin: 'bottom',
+   });
+   ScrollReveal().reveal('.topic-nav a', {
+      delay: 320,
+      interval: 64,
+      duration: 640,
+  });
+   ScrollReveal().reveal('.revealer', {
+     delay: 64,
+     duration: 640,
+     interval: 64,
+     distance: "2rem",
+     origin: 'bottom'
+  });
+  ScrollReveal().reveal('.revealer-from-right', {
+    delay: 64,
+    duration: 640,
+    interval: 64,
+    distance: "2rem",
+    origin: 'right'
+ });
+  }, []);
+
+
+
   return (
     <Layout>
-      <Header />
-      <Hamburger />
+      <HeaderDe />
+      <HamburgerDe />
       <Seo seo={seo} />
       <section className="intro">
         <article className="grid-container full">
           <div className="grid-x">
             <div className="cell medium-6">
-              <Highlights />
+              <HighlightsDe />
             </div>
             <div className="cell medium-6">
               <div className="pole-position">
-                <PolePosition />
+                <PolePositionDe />
               </div>
             </div>
           </div>
@@ -52,7 +90,7 @@ const IndexPage = () => {
         <article className="grid-container full">
           <div className="grid-x">
             <div className="cell">
-              <Topics />
+              <TopicsDe />
             </div>
           </div>
         </article>
@@ -62,13 +100,13 @@ const IndexPage = () => {
           <div className="grid-x grid-margin-x">
             <div className="cell">
               <div className="article-grid">
-                <MainFeed />
+                <MainFeedDe />
               </div>
             </div>
           </div>
         </article>
       </section>
-      <Footer />
+      <FooterDe />
     </Layout>
   )
 }

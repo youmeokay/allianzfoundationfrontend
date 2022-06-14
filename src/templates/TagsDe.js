@@ -4,8 +4,8 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout/Layout"
-import Footer from "../components/layout/Footer"
-import Hamburger from "../components/navigation/Hamburger"
+import FooterDe from "../components/layout/FooterDe"
+import HamburgerDe from "../components/navigation/HamburgerDe"
 import Seo from "../components/helpers/Seo"
 import AllModules from "../components/modules/AllModules"
 import Feeds from "../components/articles/Feeds"
@@ -137,12 +137,12 @@ const TagPage = ({ data }) => {
     return (
       <Layout as="article">
         <Helmet bodyAttributes={{class: `${tag.name}`}}/>
+        <HamburgerDe />
         <Seo seo={seo} />
-        <Hamburger />
         <header className={`main header ${
               small ? "small" : ""
             }`}>
-            <Link to="/" className="logo-link">
+            <Link to="/de/" className="logo-link">
               <h1 className="text-logo">
                 Allianz<br />
                 <span>Foundation</span>
@@ -155,12 +155,12 @@ const TagPage = ({ data }) => {
               <ul className="menu simple language-selector">
                 {tag.localizations.map((tag) => (
                   <li>
-                    <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                    <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                   </li>
                 ))}
               </ul>
             </nav>
-            <Link to="/search" className="search-icon">
+            <Link to="/de/search" className="search-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
             </Link>
             <nav className="highlight-the-hamburger">
@@ -186,7 +186,7 @@ const TagPage = ({ data }) => {
             </article>
           </section>
         </div>
-        <Footer />
+        <FooterDe />
       </Layout>
     )
   }
@@ -194,12 +194,12 @@ const TagPage = ({ data }) => {
     return (
       <Layout as="article">
       <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-      <Hamburger />
         <Seo seo={seo} />
+        <HamburgerDe />
         <header className={`main header ${
               small ? "small" : ""
             }`}>
-            <Link to="/" className="logo-link">
+            <Link to="/de/" className="logo-link">
               <h1 className="text-logo">
                 Allianz<br />
                 <span>Foundation</span>
@@ -212,12 +212,12 @@ const TagPage = ({ data }) => {
               <ul className="menu simple language-selector">
                 {tag.localizations.map((tag) => (
                   <li>
-                    <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                    <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                   </li>
                 ))}
               </ul>
             </nav>
-            <Link to="/search" className="search-icon">
+            <Link to="/de/search" className="search-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
             </Link>
             <nav className="highlight-the-hamburger">
@@ -243,7 +243,7 @@ const TagPage = ({ data }) => {
             </article>
           </section>
         </div>
-        <Footer />
+        <FooterDe />
       </Layout>
     )
   }
@@ -251,12 +251,12 @@ const TagPage = ({ data }) => {
     return (
       <Layout as="article">
       <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-      <Hamburger />
         <Seo seo={seo} />
+        <HamburgerDe />
         <header className={`main header ${
               small ? "small" : ""
             }`}>
-            <Link to="/" className="logo-link">
+            <Link to="/de/" className="logo-link">
               <h1 className="text-logo">
                 Allianz<br />
                 <span>Foundation</span>
@@ -269,12 +269,12 @@ const TagPage = ({ data }) => {
               <ul className="menu simple language-selector">
                 {tag.localizations.map((tag) => (
                   <li>
-                    <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                    <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                   </li>
                 ))}
               </ul>
             </nav>
-            <Link to="/search" className="search-icon">
+            <Link to="/de/search" className="search-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
             </Link>
             <nav className="highlight-the-hamburger">
@@ -300,7 +300,7 @@ const TagPage = ({ data }) => {
             </article>
           </section>
         </div>
-        <Footer />
+        <FooterDe />
       </Layout>
     )
   }
@@ -308,12 +308,12 @@ const TagPage = ({ data }) => {
     return (
       <Layout as="article">
       <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-      <Hamburger />
         <Seo seo={seo} />
+        <HamburgerDe />
         <header className={`main header ${
               small ? "small" : ""
             }`}>
-            <Link to="/" className="logo-link">
+            <Link to="/de/" className="logo-link">
               <h1 className="text-logo">
                 Allianz<br />
                 <span>Foundation</span>
@@ -326,12 +326,12 @@ const TagPage = ({ data }) => {
               <ul className="menu simple language-selector">
                 {tag.localizations.map((tag) => (
                   <li>
-                    <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                    <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                   </li>
                 ))}
               </ul>
             </nav>
-            <Link to="/search" className="search-icon">
+            <Link to="/de/search" className="search-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
             </Link>
             <nav className="highlight-the-hamburger">
@@ -357,7 +357,7 @@ const TagPage = ({ data }) => {
             </article>
           </section>
         </div>
-        <Footer />
+        <FooterDe />
       </Layout>
     )
   }
@@ -365,12 +365,12 @@ const TagPage = ({ data }) => {
     return (
       <Layout as="article">
       <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-      <Hamburger />
         <Seo seo={seo} />
+        <HamburgerDe />
         <header className={`main header ${
               small ? "small" : ""
             }`}>
-            <Link to="/" className="logo-link">
+            <Link to="/de/" className="logo-link">
               <h1 className="text-logo">
                 Allianz<br />
                 <span>Foundation</span>
@@ -383,12 +383,12 @@ const TagPage = ({ data }) => {
               <ul className="menu simple language-selector">
                 {tag.localizations.map((tag) => (
                   <li>
-                    <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                    <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                   </li>
                 ))}
               </ul>
             </nav>
-            <Link to="/search" className="search-icon">
+            <Link to="/de/search" className="search-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
             </Link>
             <nav className="highlight-the-hamburger">
@@ -414,7 +414,7 @@ const TagPage = ({ data }) => {
             </article>
           </section>
         </div>
-        <Footer />
+        <FooterDe />
       </Layout>
     )
   }
@@ -422,12 +422,12 @@ const TagPage = ({ data }) => {
     return (
       <Layout as="article">
       <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-      <Hamburger />
         <Seo seo={seo} />
+        <HamburgerDe />
         <header className={`main header ${
               small ? "small" : ""
             }`}>
-            <Link to="/" className="logo-link">
+            <Link to="/de/" className="logo-link">
               <h1 className="text-logo">
                 Allianz<br />
                 <span>Foundation</span>
@@ -440,12 +440,12 @@ const TagPage = ({ data }) => {
               <ul className="menu simple language-selector">
                 {tag.localizations.map((tag) => (
                   <li>
-                    <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                    <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                   </li>
                 ))}
               </ul>
             </nav>
-            <Link to="/search" className="search-icon">
+            <Link to="/de/search" className="search-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
             </Link>
             <nav className="highlight-the-hamburger">
@@ -471,7 +471,7 @@ const TagPage = ({ data }) => {
             </article>
           </section>
         </div>
-        <Footer />
+        <FooterDe />
       </Layout>
     )
   }
@@ -479,12 +479,12 @@ const TagPage = ({ data }) => {
     return (
       <Layout as="article">
       <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-      <Hamburger />
         <Seo seo={seo} />
+        <HamburgerDe />
         <header className={`main header ${
               small ? "small" : ""
             }`}>
-            <Link to="/" className="logo-link">
+            <Link to="/de/" className="logo-link">
               <h1 className="text-logo">
                 Allianz<br />
                 <span>Foundation</span>
@@ -497,12 +497,12 @@ const TagPage = ({ data }) => {
               <ul className="menu simple language-selector">
                 {tag.localizations.map((tag) => (
                   <li>
-                    <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                    <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                   </li>
                 ))}
               </ul>
             </nav>
-            <Link to="/search" className="search-icon">
+            <Link to="/de/search" className="search-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
             </Link>
             <nav className="highlight-the-hamburger">
@@ -528,7 +528,7 @@ const TagPage = ({ data }) => {
             </article>
           </section>
         </div>
-        <Footer />
+        <FooterDe />
       </Layout>
     )
   }
@@ -536,12 +536,12 @@ const TagPage = ({ data }) => {
     return (
       <Layout as="article">
       <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-      <Hamburger />
         <Seo seo={seo} />
+        <HamburgerDe />
         <header className={`main header ${
               small ? "small" : ""
             }`}>
-            <Link to="/" className="logo-link">
+            <Link to="/de/" className="logo-link">
               <h1 className="text-logo">
                 Allianz<br />
                 <span>Foundation</span>
@@ -554,12 +554,12 @@ const TagPage = ({ data }) => {
               <ul className="menu simple language-selector">
                 {tag.localizations.map((tag) => (
                   <li>
-                    <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                    <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                   </li>
                 ))}
               </ul>
             </nav>
-            <Link to="/search" className="search-icon">
+            <Link to="/de/search" className="search-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
             </Link>
             <nav className="highlight-the-hamburger">
@@ -585,7 +585,7 @@ const TagPage = ({ data }) => {
             </article>
           </section>
         </div>
-        <Footer />
+        <FooterDe />
       </Layout>
     )
   }
@@ -593,12 +593,12 @@ const TagPage = ({ data }) => {
     return (
         <Layout as="article">
         <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-        <Hamburger />
           <Seo seo={seo} />
+          <HamburgerDe />
           <header className={`main header ${
                 small ? "small" : ""
               }`}>
-              <Link to="/" className="logo-link">
+              <Link to="/de/" className="logo-link">
                 <h1 className="text-logo">
                   Allianz<br />
                   <span>Foundation</span>
@@ -611,12 +611,12 @@ const TagPage = ({ data }) => {
                 <ul className="menu simple language-selector">
                   {tag.localizations.map((tag) => (
                     <li>
-                      <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                      <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                     </li>
                   ))}
                 </ul>
               </nav>
-              <Link to="/search" className="search-icon">
+              <Link to="/de/search" className="search-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
               </Link>
               <nav className="highlight-the-hamburger">
@@ -642,7 +642,7 @@ const TagPage = ({ data }) => {
               </article>
             </section>
           </div>
-          <Footer />
+          <FooterDe />
         </Layout>
       )
   }
@@ -650,12 +650,12 @@ const TagPage = ({ data }) => {
     return (
         <Layout as="article">
         <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-        <Hamburger />
           <Seo seo={seo} />
+          <HamburgerDe />
           <header className={`main header ${
                 small ? "small" : ""
               }`}>
-              <Link to="/" className="logo-link">
+              <Link to="/de/" className="logo-link">
                 <h1 className="text-logo">
                   Allianz<br />
                   <span>Foundation</span>
@@ -668,12 +668,12 @@ const TagPage = ({ data }) => {
                 <ul className="menu simple language-selector">
                   {tag.localizations.map((tag) => (
                     <li>
-                      <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                      <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                     </li>
                   ))}
                 </ul>
               </nav>
-              <Link to="/search" className="search-icon">
+              <Link to="/de/search" className="search-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
               </Link>
               <nav className="highlight-the-hamburger">
@@ -695,7 +695,7 @@ const TagPage = ({ data }) => {
           <article className="module-horizontal-calendar-list">
             <CalendarFeedList articles={data.calendarlist.nodes} />
           </article>
-          <Footer />
+          <FooterDe />
         </Layout>
     )
   }
@@ -703,12 +703,12 @@ const TagPage = ({ data }) => {
     return (
         <Layout as="article">
         <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-        <Hamburger />
           <Seo seo={seo} />
+          <HamburgerDe />
           <header className={`main header ${
                 small ? "small" : ""
               }`}>
-              <Link to="/" className="logo-link">
+              <Link to="/de/" className="logo-link">
                 <h1 className="text-logo">
                   Allianz<br />
                   <span>Foundation</span>
@@ -721,12 +721,12 @@ const TagPage = ({ data }) => {
                 <ul className="menu simple language-selector">
                   {tag.localizations.map((tag) => (
                     <li>
-                      <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                      <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                     </li>
                   ))}
                 </ul>
               </nav>
-              <Link to="/search" className="search-icon">
+              <Link to="/de/search" className="search-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
               </Link>
               <nav className="highlight-the-hamburger">
@@ -752,7 +752,7 @@ const TagPage = ({ data }) => {
               </article>
             </section>
           </div>
-          <Footer />
+          <FooterDe />
         </Layout>
       )
   }
@@ -760,12 +760,12 @@ const TagPage = ({ data }) => {
     return (
         <Layout as="article">
         <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-        <Hamburger />
           <Seo seo={seo} />
+          <HamburgerDe />
           <header className={`main header ${
                 small ? "small" : ""
               }`}>
-              <Link to="/" className="logo-link">
+              <Link to="/de/" className="logo-link">
                 <h1 className="text-logo">
                   Allianz<br />
                   <span>Foundation</span>
@@ -778,12 +778,12 @@ const TagPage = ({ data }) => {
                 <ul className="menu simple language-selector">
                   {tag.localizations.map((tag) => (
                     <li>
-                      <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                      <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                     </li>
                   ))}
                 </ul>
               </nav>
-              <Link to="/search" className="search-icon">
+              <Link to="/de/search" className="search-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
               </Link>
               <nav className="highlight-the-hamburger">
@@ -809,7 +809,7 @@ const TagPage = ({ data }) => {
               </article>
             </section>
           </div>
-          <Footer />
+          <FooterDe />
         </Layout>
       )
   }
@@ -817,12 +817,12 @@ const TagPage = ({ data }) => {
     return (
         <Layout as="article">
         <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-        <Hamburger />
           <Seo seo={seo} />
+          <HamburgerDe />
           <header className={`main header ${
                 small ? "small" : ""
               }`}>
-              <Link to="/" className="logo-link">
+              <Link to="/de/" className="logo-link">
                 <h1 className="text-logo">
                   Allianz<br />
                   <span>Foundation</span>
@@ -835,12 +835,12 @@ const TagPage = ({ data }) => {
                 <ul className="menu simple language-selector">
                   {tag.localizations.map((tag) => (
                     <li>
-                      <Link to={`/de/${tag.slug}`} className="lang-link">DE</Link>
+                      <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
                     </li>
                   ))}
                 </ul>
               </nav>
-              <Link to="/search" className="search-icon">
+              <Link to="/de/search" className="search-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
               </Link>
               <nav className="highlight-the-hamburger">
@@ -866,7 +866,7 @@ const TagPage = ({ data }) => {
               </article>
             </section>
           </div>
-          <Footer />
+          <FooterDe />
         </Layout>
       )
   }
@@ -874,7 +874,7 @@ const TagPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query ($slug: String) {
-   tag: strapiTag(slug: { eq: $slug } locale: {eq: "en"}) {
+   tag: strapiTag(slug: { eq: $slug } locale: {eq: "de"}) {
      name
      description
      slug
@@ -1122,7 +1122,7 @@ export const pageQuery = graphql`
    }
    peopletiles: allStrapiArticle(
      filter: {options: {eq: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
-     locale: {eq: "en"}}
+     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1134,7 +1134,7 @@ export const pageQuery = graphql`
    }
    peoplelist: allStrapiArticle(
      filter: {options: {ne: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
-     locale: {eq: "en"}}
+     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1146,7 +1146,7 @@ export const pageQuery = graphql`
    }
    societytiles: allStrapiArticle(
      filter: {options: {eq: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
-     locale: {eq: "en"}}
+     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1158,7 +1158,7 @@ export const pageQuery = graphql`
    }
    societylist: allStrapiArticle(
      filter: {options: {ne: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
-     locale: {eq: "en"}}
+     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1170,7 +1170,7 @@ export const pageQuery = graphql`
    }
    planettiles: allStrapiArticle(
      filter: {options: {eq: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
-     locale: {eq: "en"}}
+     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1182,7 +1182,7 @@ export const pageQuery = graphql`
    }
    planetlist: allStrapiArticle(
      filter: {options: {ne: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
-     locale: {eq: "en"}}
+     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1195,7 +1195,7 @@ export const pageQuery = graphql`
 
    hubs: allStrapiArticle(
      filter: {options: {eq: "Hub"} tags: {elemMatch: {slug: {eq: $slug}}}
-     locale: {eq: "en"}}
+     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1207,7 +1207,7 @@ export const pageQuery = graphql`
    }
    hubslist: allStrapiArticle(
      filter: {options: {ne: "Hub"} tags: {elemMatch: {slug: {eq: $slug}}}
-     locale: {eq: "en"}}
+     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1220,7 +1220,7 @@ export const pageQuery = graphql`
 
    fellows: allStrapiArticle(
      filter: {options: {eq: "Fellow"} tags: {elemMatch: {slug: {eq: $slug}}}
-     locale: {eq: "en"}}
+     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1232,7 +1232,7 @@ export const pageQuery = graphql`
    }
    fellowlist: allStrapiArticle(
      filter: {options: {ne: "Fellow"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1246,7 +1246,7 @@ export const pageQuery = graphql`
 
    study: allStrapiArticle(
      filter: {options: {eq: "Study"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1258,7 +1258,7 @@ export const pageQuery = graphql`
    }
    studylist: allStrapiArticle(
      filter: {options: {ne: "Study"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1272,7 +1272,7 @@ export const pageQuery = graphql`
 
    funding: allStrapiArticle(
      filter: {options: {eq: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1284,7 +1284,7 @@ export const pageQuery = graphql`
    }
    fundinglist: allStrapiArticle(
      filter: {options: {ne: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1297,7 +1297,7 @@ export const pageQuery = graphql`
 
    calls: allStrapiArticle(
      filter: {options: {eq: "Call"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1309,7 +1309,7 @@ export const pageQuery = graphql`
    }
    calllist: allStrapiArticle(
      filter: {options: {ne: "Call"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1323,7 +1323,7 @@ export const pageQuery = graphql`
 
    news: allStrapiArticle(
      filter: {options: {eq: "News"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1335,7 +1335,7 @@ export const pageQuery = graphql`
    }
    newslist: allStrapiArticle(
      filter: {options: {ne: "News"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1349,7 +1349,7 @@ export const pageQuery = graphql`
 
    calendar: allStrapiArticle(
      filter: {options: {eq: "Event"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1361,7 +1361,7 @@ export const pageQuery = graphql`
    }
    calendarlist: allStrapiArticle(
      filter: {options: {ne: "Event"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1375,7 +1375,7 @@ export const pageQuery = graphql`
 
    risktaker: allStrapiArticle(
      filter: {options: {eq: "Risktaker"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1387,7 +1387,7 @@ export const pageQuery = graphql`
    }
    risktakerlist: allStrapiArticle(
      filter: {options: {ne: "Risktaker"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1401,7 +1401,7 @@ export const pageQuery = graphql`
 
    europe: allStrapiArticle(
      filter: {options: {eq: "europe"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1413,7 +1413,7 @@ export const pageQuery = graphql`
    }
    europelist: allStrapiArticle(
      filter: {options: {ne: "Europe"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1427,7 +1427,7 @@ export const pageQuery = graphql`
 
    culture: allStrapiArticle(
      filter: {options: {eq: "culture"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC
@@ -1439,7 +1439,7 @@ export const pageQuery = graphql`
    }
    culturelist: allStrapiArticle(
      filter: {options: {ne: "Culture"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "en"}}
+    locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
        order: DESC

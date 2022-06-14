@@ -4,8 +4,8 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql, withPrefix, Link, useStaticQuery } from "gatsby"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout/Layout"
-import Footer from "../components/layout/Footer"
-import Hamburger from "../components/navigation/Hamburger"
+import FooterDe from "../components/layout/FooterDe"
+import Hamburger from "../components/navigation/HamburgerDe"
 import Seo from "../components/helpers/Seo"
 import AllModules from "../components/modules/AllModules"
 import CalendarFeed from "../components/articles/CalendarFeed"
@@ -174,7 +174,7 @@ const ArticlePage = ({ data }) => {
     <header className={`main header ${
           small ? "small" : ""
         }`}>
-        <Link to="/" className="logo-link">
+        <Link to="/de/" className="logo-link">
           <h1 className="text-logo">
             Allianz<br />
             <span>Foundation</span>
@@ -187,7 +187,7 @@ const ArticlePage = ({ data }) => {
           <ul className="menu simple language-selector">
             {article.localizations.map((article) => (
               <li>
-                <Link to={`/de/${article.slug}`} className="lang-link">DE</Link>
+                <Link to={`/${article.slug}`} className="lang-link">EN</Link>
               </li>
             ))}
           </ul>
@@ -564,7 +564,7 @@ const ArticlePage = ({ data }) => {
         ) : (
         <></>
       )}
-      <Footer />
+      <FooterDe />
     </Layout>
   )
 }
@@ -573,7 +573,7 @@ export const pageQuery = graphql`
   query ($slug: String) {
     calendar: allStrapiArticle(
       filter: {
-        locale: {eq: "en"}
+        locale: {eq: "de"}
         tags: {
           elemMatch: {
             slug: {eq: "calendar"}
@@ -593,7 +593,7 @@ export const pageQuery = graphql`
     }
     calendarlist: allStrapiArticle(
       filter: {
-        locale: {eq: "en"}
+        locale: {eq: "de"}
         tags: {
           elemMatch: {
             slug: {eq: "calendar"}
@@ -613,7 +613,7 @@ export const pageQuery = graphql`
     }
     fundinglist: allStrapiArticle(
       filter: {
-        locale: {eq: "en"}
+        locale: {eq: "de"}
         tags: {
           elemMatch: {
             slug: {eq: "funding"}
@@ -633,7 +633,7 @@ export const pageQuery = graphql`
     }
     fellowslist: allStrapiArticle(
       filter: {
-        locale: {eq: "en"}
+        locale: {eq: "de"}
         tags: {
           elemMatch: {
             slug: {eq: "fellows"}
@@ -653,7 +653,7 @@ export const pageQuery = graphql`
     }
     callfeed: allStrapiArticle(
       filter: {
-        locale: {eq: "en"}
+        locale: {eq: "de"}
         tags: {
           elemMatch: {
             slug: {eq: "calls"}
@@ -673,7 +673,7 @@ export const pageQuery = graphql`
     }
     callfeedlist: allStrapiArticle(
       filter: {
-        locale: {eq: "en"}
+        locale: {eq: "de"}
         tags: {
           elemMatch: {
             slug: {eq: "calls"}
@@ -691,7 +691,7 @@ export const pageQuery = graphql`
        ...ArticleCard
      }
     }
-    strapiArticle(slug: { eq: $slug } locale: {eq: "en"}) {
+    strapiArticle(slug: { eq: $slug } locale: {eq: "de"}) {
       id
       slug
       title

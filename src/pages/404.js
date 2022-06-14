@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout/Layout"
+import Footer from "../components/layout/Footer"
 
 const NotFoundPage = () => {
   return (
@@ -15,6 +16,7 @@ const NotFoundPage = () => {
           </div>
         </article>
       </section>
+      <Footer />
     </Layout>
   )
 }

@@ -7,7 +7,7 @@ const PolePosition = () => {
 
   const { strapiIndex } = useStaticQuery(graphql`
     query {
-      strapiIndex(locale: {eq: "en"}) {
+      strapiIndex(locale: {eq: "de"}) {
           PoleItem {
             article {
               slug
@@ -59,7 +59,7 @@ const PolePosition = () => {
   return (
       <div className="articleCard revealer-from-right" key={`${article.slug}`}>
         <div className="articleImage">
-          <Link to={`/${article.slug}`}>
+          <Link to={`/de/${article.slug}`}>
             {isVideo ? (
               <div className="player-wrap"
                 dangerouslySetInnerHTML={{ __html: `<video onloadstart="this.volume=0.0" class="allianz-player" playsinline autoplay loop><source src="${article.videocover.file.url}" type="video/mp4" /></video>` }}
@@ -73,7 +73,7 @@ const PolePosition = () => {
           </Link>
         </div>
         <div className="articleDesc">
-          <Link to={`/${article.slug}`}>
+          <Link to={`/de/${article.slug}`}>
             <div className="articleTitle">
               <h2 style={{marginTop: 1 + 'rem'}}>{article.title}</h2>
             </div>

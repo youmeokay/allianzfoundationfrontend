@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout/Layout"
+import Footer from "../components/layout/Footer"
 import Seo from "../components/helpers/Seo"
 
 import { InstantSearch, SearchBox, Highlight, connectHits } from 'react-instantsearch-dom';
@@ -25,7 +26,7 @@ const SearchPage = () => {
           <div className="grid-x align-center">
             <div className="cell search-container">
               <InstantSearch
-                indexName="allianzfoundationweb"
+                indexName="allianz"
                 searchClient={searchClient}
               >
               <SearchBox autoFocus searchAsYouType
@@ -40,6 +41,7 @@ const SearchPage = () => {
           </div>
         </article>
       </section>
+      <Footer />
     </Layout>
   )
 }
