@@ -7,7 +7,7 @@ const MainFeed = ({src, isMuted}) => {
 
   const { strapiIndex, ml, mr, sl, sm, sr, bl, srb, slb, brs } = useStaticQuery(graphql`
     query {
-      ml: strapiIndex {
+      ml: strapiIndex(locale: {eq: "en"}) {
         mediumleft {
           article {
             slug
@@ -47,7 +47,7 @@ const MainFeed = ({src, isMuted}) => {
           }
         }
       }
-      mr: strapiIndex {
+      mr: strapiIndex(locale: {eq: "en"}) {
         mediumright {
 
           id
@@ -89,7 +89,7 @@ const MainFeed = ({src, isMuted}) => {
           }
         }
       }
-      sl: strapiIndex {
+      sl: strapiIndex(locale: {eq: "en"}) {
         smallleft {
 
           id
@@ -131,7 +131,7 @@ const MainFeed = ({src, isMuted}) => {
           }
         }
       }
-      sm: strapiIndex {
+      sm: strapiIndex(locale: {eq: "en"}) {
         smallmiddle {
 
           id
@@ -174,7 +174,7 @@ const MainFeed = ({src, isMuted}) => {
           }
         }
       }
-      sr: strapiIndex {
+      sr: strapiIndex(locale: {eq: "en"}) {
         smallright {
 
           id
@@ -216,7 +216,7 @@ const MainFeed = ({src, isMuted}) => {
           }
         }
       }
-      bl: strapiIndex {
+      bl: strapiIndex(locale: {eq: "en"}) {
         bigleft {
 
           id
@@ -258,7 +258,7 @@ const MainFeed = ({src, isMuted}) => {
           }
         }
       }
-      srb: strapiIndex {
+      srb: strapiIndex(locale: {eq: "en"}) {
         smallrightbig {
 
           id
@@ -300,7 +300,7 @@ const MainFeed = ({src, isMuted}) => {
           }
         }
       }
-      slb: strapiIndex {
+      slb: strapiIndex(locale: {eq: "en"}) {
         smallleftbig {
 
           id
@@ -342,7 +342,7 @@ const MainFeed = ({src, isMuted}) => {
           }
         }
       }
-      brs: strapiIndex {
+      brs: strapiIndex(locale: {eq: "en"}) {
         bigrightsmall {
 
           id
