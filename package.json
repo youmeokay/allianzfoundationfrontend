@@ -21,6 +21,7 @@
     "@meilisearch/instant-meilisearch": "^0.7.1",
     "algoliasearch": "^4.13.1",
     "gatsby": "^4.16.0",
+    "gatsby-cli": "^4.17.0",
     "gatsby-plugin-gatsby-cloud": "^4.16.0",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^2.16.0",
