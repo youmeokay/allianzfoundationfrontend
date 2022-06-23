@@ -125,8 +125,8 @@
 * ***/
 
   .module-text, .module-slider, .module-media, .module-carousel, .module-link-list,
-  .module-quote, .sticky-inner, .scroll-content, .module-highlight, .module-accordeon { padding-top: var(--sectionPaddings); }
-  .module-galerie { padding-top: calc(var(--sectionPaddings) - var(--padding)); }
+  .module-quote, .sticky-inner, .scroll-content, .module-highlight, .module-accordeon,
+  .module-galerie { padding-top: var(--sectionPaddings); }
   .module-stage { margin-top: var(--sectionPaddings); }
 
 
@@ -773,7 +773,19 @@
 
   .entry-image {width: 100%; background: var(--mudgreydark);}
   .entry-image {margin-bottom: calc(var(--padding) * .4);}
-  .entry .html-content {margin-bottom: calc(var(--padding) * 0.75);}
+  /* .entry .html-content {margin-bottom: calc(var(--padding) * 0.75);} */
+  .entry:nth-child(4) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(5) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(6) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(7) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(8) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(9) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(10) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(11) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(12) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(13) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(14) .html-content {margin-top: calc(var(--padding) * 0.75);}
+  .entry:nth-child(15) .html-content {margin-top: calc(var(--padding) * 0.75);}
 
 
 /* ***
@@ -933,7 +945,12 @@
     position: relative;
     box-shadow: inset 0 0 0 4px #000;
     background-color: #000;}
-  .highlight p {color: white; margin-bottom: calc(var(--padding) * 0.25);}
+  .highlight p {
+    position: relative; z-index: 1;
+    color: white; margin-bottom: calc(var(--padding) * 0.25);}
+  .highlight-title {
+    position: relative; color: white;
+    transition: 320ms var(--ease);}
   .highlight:before {
     position: absolute;
     left: 0;
@@ -951,9 +968,7 @@
     color: var(--dark);}
   .highlight:hover:before {
     transform: scaleY(1);}
-  .highlight-title {
-    position: relative; color: white;
-    transition: 320ms var(--ease);}
+
 
 
 
@@ -1445,8 +1460,6 @@
   margin-bottom:0; max-width: 85%;}
 
 .horizontal-container {
-  overscroll-behavior: none;
-  overflow-x: hidden;
   display: flex;
   width: 50%;
   flex-wrap: nowrap;

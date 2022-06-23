@@ -52,13 +52,11 @@ const HorizontalGalery = ({ data }) => {
           <div className="horizontal-container two"  id={`trigger__${data.id}`}>
             {data.horizontalentry.map((entry, i) => (
               <div className={`panel panel__${data.id}`}>
-                <div className="height-wrapper">
-                  <div className="html-content grid-x">
-                    <div class="cell">
-                      <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
-                      {entry.title && <p><b>{entry.title}</b></p>}
-                      {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
-                    </div>
+                <div className="html-content grid-x">
+                  <div class="cell">
+                    <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
+                    {entry.title && <p><b>{entry.title}</b></p>}
+                    {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
                   </div>
                 </div>
               </div>
@@ -71,13 +69,11 @@ const HorizontalGalery = ({ data }) => {
           <div className="horizontal-container three"  id={`trigger__${data.id}`}>
             {data.horizontalentry.map((entry, i) => (
               <div className={`panel panel__${data.id}`}>
-                <div className="height-wrapper">
-                  <div className="html-content grid-x">
-                    <div class="cell">
-                      <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
-                      {entry.title && <p><b>{entry.title}</b></p>}
-                      {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
-                    </div>
+                <div className="html-content grid-x">
+                  <div class="cell">
+                    <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
+                    {entry.title && <p><b>{entry.title}</b></p>}
+                    {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
                   </div>
                 </div>
               </div>
@@ -90,13 +86,11 @@ const HorizontalGalery = ({ data }) => {
           <div className="horizontal-container four"  id={`trigger__${data.id}`}>
             {data.horizontalentry.map((entry, i) => (
               <div className={`panel panel__${data.id}`}>
-                <div className="height-wrapper">
-                  <div className="html-content grid-x">
-                    <div class="cell">
-                      <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
-                      {entry.title && <p><b>{entry.title}</b></p>}
-                      {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
-                    </div>
+                <div className="html-content grid-x">
+                  <div class="cell">
+                    <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
+                    {entry.title && <p><b>{entry.title}</b></p>}
+                    {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
                   </div>
                 </div>
               </div>
@@ -109,13 +103,11 @@ const HorizontalGalery = ({ data }) => {
           <div className="horizontal-container five"  id={`trigger__${data.id}`}>
             {data.horizontalentry.map((entry, i) => (
               <div className={`panel panel__${data.id}`}>
-                <div className="height-wrapper">
-                  <div className="html-content grid-x">
-                    <div class="cell">
-                      <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
-                      {entry.title && <p><b>{entry.title}</b></p>}
-                      {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
-                    </div>
+                <div className="html-content grid-x">
+                  <div class="cell">
+                    <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
+                    {entry.title && <p><b>{entry.title}</b></p>}
+                    {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
                   </div>
                 </div>
               </div>
@@ -128,13 +120,11 @@ const HorizontalGalery = ({ data }) => {
           <div className="horizontal-container six"  id={`trigger__${data.id}`}>
             {data.horizontalentry.map((entry, i) => (
               <div className={`panel panel__${data.id}`}>
-                <div className="height-wrapper">
-                  <div className="html-content grid-x">
-                    <div class="cell">
-                      <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
-                      {entry.title && <p><b>{entry.title}</b></p>}
-                      {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
-                    </div>
+                <div className="html-content grid-x">
+                  <div class="cell">
+                    <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
+                    {entry.title && <p><b>{entry.title}</b></p>}
+                    {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
                   </div>
                 </div>
               </div>
@@ -147,13 +137,11 @@ const HorizontalGalery = ({ data }) => {
           <div className="horizontal-container seven"  id={`trigger__${data.id}`}>
             {data.horizontalentry.map((entry, i) => (
               <div className={`panel panel__${data.id}`}>
-                <div className="height-wrapper">
-                  <div className="html-content grid-x">
-                    <div class="cell">
-                      <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
-                      {entry.title && <p><b>{entry.title}</b></p>}
-                      {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
-                    </div>
+                <div className="html-content grid-x">
+                  <div class="cell">
+                    <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
+                    {entry.title && <p><b>{entry.title}</b></p>}
+                    {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
                   </div>
                 </div>
               </div>
@@ -166,13 +154,11 @@ const HorizontalGalery = ({ data }) => {
           <div className="horizontal-container eight"  id={`trigger__${data.id}`}>
             {data.horizontalentry.map((entry, i) => (
               <div className={`panel panel__${data.id}`}>
-                <div className="height-wrapper">
-                  <div className="html-content grid-x">
-                    <div class="cell">
-                      <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
-                      {entry.title && <p><b>{entry.title}</b></p>}
-                      {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
-                    </div>
+                <div className="html-content grid-x">
+                  <div class="cell">
+                    <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
+                    {entry.title && <p><b>{entry.title}</b></p>}
+                    {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
                   </div>
                 </div>
               </div>
@@ -185,13 +171,11 @@ const HorizontalGalery = ({ data }) => {
           <div className="horizontal-container nine"  id={`trigger__${data.id}`}>
             {data.horizontalentry.map((entry, i) => (
               <div className={`panel panel__${data.id}`}>
-                <div className="height-wrapper">
-                  <div className="html-content grid-x">
-                    <div class="cell">
-                      <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
-                      {entry.title && <p><b>{entry.title}</b></p>}
-                      {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
-                    </div>
+                <div className="html-content grid-x">
+                  <div class="cell">
+                    <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
+                    {entry.title && <p><b>{entry.title}</b></p>}
+                    {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
                   </div>
                 </div>
               </div>
@@ -204,13 +188,11 @@ const HorizontalGalery = ({ data }) => {
           <div className="horizontal-container ten"  id={`trigger__${data.id}`}>
             {data.horizontalentry.map((entry, i) => (
               <div className={`panel panel__${data.id}`}>
-                <div className="height-wrapper">
-                  <div className="html-content grid-x">
-                    <div class="cell">
-                      <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
-                      {entry.title && <p><b>{entry.title}</b></p>}
-                      {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
-                    </div>
+                <div className="html-content grid-x">
+                  <div class="cell">
+                    <GatsbyImage image={getImage(entry.media.file)} alt={entry.media.alternativeText} />
+                    {entry.title && <p><b>{entry.title}</b></p>}
+                    {entry.text && <div dangerouslySetInnerHTML={{__html: entry.text}} />}
                   </div>
                 </div>
               </div>
