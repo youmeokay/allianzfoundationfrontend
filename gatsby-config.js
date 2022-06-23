@@ -7,6 +7,60 @@ const languages = require('./src/intl/Languages');
 module.exports = {
   plugins: [
     {
+      resolve: 'gatsby-plugin-meilisearch',
+      options: {
+        host: 'http://134.209.231.38', // your host URL goes here
+        apiKey: 'NTk2NzIyZTIzOTExY2I1N2IxMzMzMzUx',   // your API key goes here
+        batchSize: 1,
+        indexes: [
+        {
+          indexUid: 'allianzfoundation',
+          transformer: (data) =>
+            data.enArticle.nodes.map((node, index) => ({
+              title: index,
+              description: index,
+              slug: index,
+              ...node,
+            })),
+          query: `
+            query MyQuery {
+              enArticle: allStrapiArticle(filter: {locale: {eq: "en"}}) {
+                nodes {
+                  id
+                  title
+                  description
+                  slug
+                }
+              }
+            }
+          `,
+        },
+        {
+          indexUid: 'allianzfoundationde',
+          transformer: (data) =>
+            data.enArticle.nodes.map((node, index) => ({
+              title: index,
+              description: index,
+              slug: index,
+              ...node,
+            })),
+          query: `
+            query MyQuery {
+              enArticle: allStrapiArticle(filter: {locale: {eq: "de"}}) {
+                nodes {
+                  id
+                  title
+                  description
+                  slug
+                }
+              }
+            }
+          `,
+        },
+      ]
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `AllianzFoundation`,

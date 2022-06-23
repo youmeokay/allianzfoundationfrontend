@@ -1232,7 +1232,7 @@
 	  outerScale = 6,
 	  innerScale = 0.6,
 	  trailingSpeed = 8,
-	  clickables = ['.list-card', '.link-list a', '.calendar-card-list', '.deactivated', '.highlight-the-hamburger', '.html-content a', '.readmore-toggle', '.articleDesc a', '.topic-nav a', '.search-icon', '.logo-link', '.menu a', '.button', '.accordeon', 'input[type="text"]', 'input[type="email"]', 'input[type="number"]', 'input[type="submit"]', 'input[type="search"]', 'input[type="image"]', 'label[for]', 'select', 'textarea', 'button'],
+	  clickables = ['.search-hit', '.list-card', '.link-list a', '.calendar-card-list', '.deactivated', '.highlight-the-hamburger', '.html-content a', '.readmore-toggle', '.articleDesc a', '.topic-nav a', '.search-icon', '.logo-link', '.menu a', '.button', '.accordeon', 'input[type="text"]', 'input[type="email"]', 'input[type="number"]', 'input[type="submit"]', 'input[type="search"]', 'input[type="image"]', 'label[for]', 'select', 'textarea', 'button'],
 		imageclickables = ['.articleImage a'],
 		carouselclickablesnext = ['.swiper-button-next'],
 		carouselclickablesprev = ['.swiper-button-prev'],

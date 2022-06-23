@@ -6312,6 +6312,13 @@ gatsby-plugin-manifest@^4.17.0:
     semver "^7.3.7"
     sharp "^0.30.3"
 
+gatsby-plugin-meilisearch@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-meilisearch/-/gatsby-plugin-meilisearch-0.1.2.tgz#d3051398613de975c2a34e2c990d012d6db5ffba"
+  integrity sha512-0MHTvM+BzcqU4g8taiNbrCbgOjeYsjaMh+yDyeOK2+ydCAXUD3AJPDqbhO+0k/j4OR/BvBM5Rt8R/2erb4RawQ==
+  dependencies:
+    meilisearch "^0.25.1"
+
 gatsby-plugin-page-creator@^4.17.0:
   version "4.17.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-4.17.0.tgz#2a5521fddce5c626ee2fb2bee498c1ed77e64f68"
@@ -8522,7 +8529,7 @@ media-typer@0.3.0:
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==
 
-meilisearch@0.25.1:
+meilisearch@0.25.1, meilisearch@^0.25.1:
   version "0.25.1"
   resolved "https://registry.yarnpkg.com/meilisearch/-/meilisearch-0.25.1.tgz#0dc25ffad64e6e50eb3da6c0691b0ff54f8578bf"
   integrity sha512-20jO0pK9BhghxHSkOLbdoYn58h/Z0PNL3JQcRq7ipNIeqrxkAetCZZ6ttJC3uxcz0jVglmiFoSXu3Z/lEOLOLQ==
@@ -10243,7 +10250,7 @@ react-instantsearch-core@6.29.0:
     prop-types "^15.6.2"
     react-fast-compare "^3.0.0"
 
-react-instantsearch-dom@^6.27.0:
+react-instantsearch-dom@^6.29.0:
   version "6.29.0"
   resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-6.29.0.tgz#9d3015b4947d5f2033ea551076ea48e4e693a540"
   integrity sha512-mLx2BCYRIkI+Qo4wvdPZi1mQKKjIolQ0lwhg6Zq+XJPBbeq18fMl6SQOPoq/UvWnhgk/yZmhaPnY25Lok7hSuQ==
