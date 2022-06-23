@@ -88,28 +88,6 @@ const TagPage = ({ data }) => {
 
     })();
 
-
-    ScrollReveal().reveal('.revealer', {
-      delay: 64,
-      duration: 640,
-      interval: 128,
-      distance: "2rem",
-      origin: 'bottom'
-     });
-    ScrollReveal().reveal('.delay-revealer', {
-      delay: 320,
-      duration: 640,
-      distance: "2rem",
-      origin: 'bottom'
-   });
-   ScrollReveal().reveal('.revealer-from-left', {
-      delay: 64,
-      duration: 640,
-      distance: "2rem",
-      origin: 'left'
-  });
-
-
   }, []);
 
   const tag = data.tag

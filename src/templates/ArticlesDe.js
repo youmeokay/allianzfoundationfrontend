@@ -116,20 +116,6 @@ const ArticlePage = ({ data }) => {
 
    })();
 
-   ScrollReveal().reveal('.revealer', {
-      delay: 64,
-      duration: 640,
-      interval: 128,
-      distance: "2rem",
-      origin: 'bottom'
-    });
-    ScrollReveal().reveal('.revealer-from-left', {
-      delay: 64,
-      duration: 640,
-      distance: "2rem",
-      origin: 'left'
-   });
-
     gsap.registerPlugin(ScrollTrigger);
 
     const myHorizontal = ".panel-calendar"
