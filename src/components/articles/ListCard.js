@@ -19,7 +19,7 @@ const ListCard = ({ article }) => {
   return (
     <Link to={`/${article.slug}`} className="list-card cell revealer">
       <div className="grid-x align-middle">
-        <div className="cell medium-2 small-4">
+        <div className="cell medium-2">
           <div className="articleImage">
             {isVideo ? (
               <div className="player-wrap"
@@ -33,7 +33,7 @@ const ListCard = ({ article }) => {
               )}
           </div>
         </div>
-        <div className="cell medium-9 small-8">
+        <div className="cell medium-9">
           <div className="articleDesc">
             <Link to={`/${article.slug}`}>
               <div className="articleTitle">

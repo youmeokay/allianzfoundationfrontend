@@ -284,7 +284,9 @@
     background: transparent;}
 
   .Hubs header.main.small, .Fellows header.main.small,
-  .Study header.main.small, .posts header.main.small {
+  .Study header.main.small, .posts header.main.small,
+  .People header.main.small, .Planet header.main.small,
+  .Society header.main.small {
     background: var(--white);}
 
 
@@ -1795,17 +1797,17 @@
         .module-text, .module-slider, .module-media, .module-carousel, .module-fixed-media,
         .module-link-list, .module-quote, .sticky-inner, .scroll-content, .module-fixed-text,
         .module-highlight, .module-accordeon {
-          padding-top: calc(var(--sectionPaddings) * 0.5);}
+          padding-top: calc(var(--sectionPaddings) * 0.25);}
         .scroll-content, .sticky-content .sticky-inner {padding-top:0;}
         .module-stage, .module-quote, .module-horizontal-scrolltrigger,
-        .module-horizontal-calendar-list, .tag-feed, .list-feed, .calendar-feed {margin-top: calc(var(--sectionPaddings) * 0.5);}
+        .module-horizontal-calendar-list, .tag-feed, .list-feed, .calendar-feed {margin-top: calc(var(--sectionPaddings) * 0.25);}
         .module-text .medium-8 {width: 100%;}
 
 
         p.caption {
           max-width: 85%;
           padding: calc(var(--padding) * .25);
-          padding-top:calc(var(--padding) * .2);
+          padding-top:calc(var(--padding) * .1);
           padding-bottom:0;}
 
         .stage-caption, .swiper .caption {padding-left:0;}
@@ -1852,7 +1854,7 @@
         .module-fixed-text .grid-margin-x {margin:0;}
         .module-fixed-text .grid-margin-x > .cell {width: 100%; margin:0;}
 
-
+        .list-card .articleDesc h2 {position: relative; top: -3px; font-size: calc(var(--text-medium) * 1); }
 
         /* feeds ***
         ************/
@@ -1894,7 +1896,11 @@
           margin-bottom: calc(var(--sectionPaddings) * 0.25);}
 
         .list-card .articleImage {
-          padding-left: calc(var(--padding) * .25);}
+          padding-left: calc(var(--padding) * 0);}
+        .list-card .articleImage img,
+        .list-card .articleImage video {
+          max-height: 20vh; object-fit: cover; object-position: center;
+        }
         .list-card .articleDesc {
           padding:calc(var(--padding) * .25);}
 
@@ -1909,5 +1915,64 @@
         .button {position: relative; right: -2px;}
 
         .calendar-card .articleDesc h2 {padding: calc(var(--padding) * 0.25) 0; position: relative; top: -7px; font-size: calc(var(--text-medium) * 1);}
+
+
+        .entry:nth-child(2) {margin-top: calc(var(--padding) * 0.75);}
+        .entry:nth-child(3) {margin-top: calc(var(--padding) * 0.75);}
+
+        .fullScreen.module-stage, .fullScreen.module-stage .stage-media,
+        .module-stage, .module-stage .stage-media {
+          height: auto;}
+        .allianz-foundation section.modules article.module-stage:first-child {
+          margin-top: 54px;}
+
+        .Hubs .allianz-foundation section.modules article.module-stage:first-child,
+        .Fellows .allianz-foundation section.modules article.module-stage:first-child,
+        .Study .allianz-foundation section.modules article.module-stage:first-child,
+        .posts .allianz-foundation section.modules article.module-stage:first-child,
+        .People .allianz-foundation section.modules article.module-stage:first-child,
+        .Planet .allianz-foundation section.modules article.module-stage:first-child,
+        .Society .allianz-foundation section.modules article.module-stage:first-child {
+          margin-top: 70px;}
+
+        .allianz-foundation section.post.modules article.module-article-intro.noFullScreen:first-child {
+          margin-top: calc(var(--sectionPaddings) * 0.25);
+          padding-top: 54px;}
+
+        .small h1.text-logo {
+          transition: all 256ms var(--ease);
+          font-size: var(--text-logo);
+          letter-spacing: var(--text-logo-spacing);
+          line-height: .83;}
+        header.main.small .text-logo {top: -5px;}
+
+        .articleMeta svg {
+          width: 18px; height: 18px;}
+        .calendar-card .articleMeta b {
+          top: -2px; font-size: 80%;}
+        .event-date {
+          padding-bottom:0;
+          top: 0px; border-bottom:0; background: none;}
+        .calendar-content {
+          padding:0; padding-left: calc(var(--padding) * .25);
+           padding-right: calc(var(--padding) * .25);
+        }
+        .event-date h3 {
+          font-size: 80%; font-weight: 500;}
+
+        .horizontal-container .calendar-content {
+          padding-top: 2px;}
+        .calendar-content h2 {margin-top:0;}
+
+        .calendar-card-list .articleImage {
+          padding: 0 calc(var(--padding) * .25);
+          margin-bottom: calc(var(--padding) * 0.25);
+        }
+
+        .calendar-card-list {
+          border-left:0;
+          border-right: 4px solid var(--dark);
+          border-bottom: 4px solid var(--dark);
+        }
 
       }

@@ -19,7 +19,7 @@ const CalendarCard = ({ article }) => {
   return (
     <Link to={`/${article.slug}`} className="list-card calendar-card">
       <div className="grid-x align-middle">
-        <div className="cell small-5">
+        <div className="cell medium-5">
           <div className="articleImage">
             {isVideo ? (
               <div className="player-wrap"
@@ -33,7 +33,7 @@ const CalendarCard = ({ article }) => {
               )}
           </div>
         </div>
-        <div className="cell small-6">
+        <div className="cell medium-6">
           <div className="articleDesc">
             <div className="articleMeta">
               <ul className="menu simple">
