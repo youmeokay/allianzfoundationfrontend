@@ -6,6 +6,27 @@ const languages = require('./src/intl/Languages');
 
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `AllianzFoundation`,
+        short_name: `AllianzFoundation`,
+        description: `We all live in a present that is characterized by rapid change. A present that poses great challenges to next generations.`,
+        lang: `en`,
+        display: `standalone`,
+        icon: `./src/assets/icon.png`,
+        start_url: `/`,
+        background_color: `#000`,
+        theme_color: `#fff`,
+        localize: [
+          {
+            start_url: `/de/`,
+            lang: `de`,
+            description: `Wir alle leben in einer Gegenwart, die von schnellen Veränderungen geprägt ist. Eine Gegenwart, die die nächsten Generationen vor große Herausforderungen stellt.`,
+          },
+        ],
+      },
+    },
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-postcss",
     {
