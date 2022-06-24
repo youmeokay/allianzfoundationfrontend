@@ -9,7 +9,7 @@ import { InstantSearch, SearchBox, Highlight, connectHits } from 'react-instants
 import { instantMeiliSearch } from '@meilisearch/instant-meilisearch';
 
 const searchClient = instantMeiliSearch(
-  "http://134.209.231.38",
+  "https://allianz-foundation.net",
   "NTk2NzIyZTIzOTExY2I1N2IxMzMzMzUx",
   {
     paginationTotalHits: 200, // default: 200.
