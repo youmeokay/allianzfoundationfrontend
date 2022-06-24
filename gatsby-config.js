@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-meilisearch',
       options: {
-        host: 'http://134.209.231.38', // your host URL goes here
+        host: 'https://allianz-foundation.net', // your host URL goes here
         apiKey: 'NTk2NzIyZTIzOTExY2I1N2IxMzMzMzUx',   // your API key goes here
         batchSize: 1,
         indexes: [
