@@ -217,17 +217,24 @@ module.exports = {
                 return Object.assign({}, {
                   description: node.description,
                   title: node.title,
+                  date: node.createdAt,
                   url: encodeURI(`https://allianzfoundationfrontend.gatsbyjs.io/` + node.slug),
                 })
               })
             },
             query: `
               {
-                allStrapiArticle(filter: {locale: {eq: "en"}}) {
+                allStrapiArticle(
+                  filter: {locale: {eq: "en"}}
+                  sort: {
+                    fields: [updatedAt],
+                    order: DESC
+                  }) {
                   nodes {
                     title
                     description
                     slug
+                    createdAt
                   }
                 }
               }
