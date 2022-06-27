@@ -36,9 +36,31 @@ module.exports = {
           `,
         },
         {
-          indexUid: 'allianzfoundationde',
+          indexUid: 'allianzfoundation',
           transformer: (data) =>
-            data.enArticle.nodes.map((node, index) => ({
+            data.enFeed.nodes.map((node, index) => ({
+              name: index,
+              description: index,
+              slug: index,
+              ...node,
+            })),
+          query: `
+            query MyQuery {
+              enFeed: allStrapiTag(filter: {locale: {eq: "en"}}) {
+                nodes {
+                  id
+                  name
+                  description
+                  slug
+                }
+              }
+            }
+          `,
+        },
+        {
+          indexUid: 'allianzfoundation',
+          transformer: (data) =>
+            data.allStrapiAbout.nodes.map((node, index) => ({
               title: index,
               description: index,
               slug: index,
@@ -46,7 +68,73 @@ module.exports = {
             })),
           query: `
             query MyQuery {
-              enArticle: allStrapiArticle(filter: {locale: {eq: "de"}}) {
+              allStrapiAbout(filter: {locale: {eq: "en"}}) {
+                nodes {
+                  id
+                  title
+                  description
+                  slug
+                }
+              }
+            }
+          `,
+        },
+        {
+          indexUid: 'allianzfoundationde',
+          transformer: (data) =>
+            data.deArticle.nodes.map((node, index) => ({
+              title: index,
+              description: index,
+              slug: index,
+              ...node,
+            })),
+          query: `
+            query MyQuery {
+              deArticle: allStrapiArticle(filter: {locale: {eq: "de"}}) {
+                nodes {
+                  id
+                  title
+                  description
+                  slug
+                }
+              }
+            }
+          `,
+        },
+        {
+          indexUid: 'allianzfoundationde',
+          transformer: (data) =>
+            data.deFeed.nodes.map((node, index) => ({
+              name: index,
+              description: index,
+              slug: index,
+              ...node,
+            })),
+          query: `
+            query MyQuery {
+              deFeed: allStrapiTag(filter: {locale: {eq: "de"}}) {
+                nodes {
+                  id
+                  name
+                  description
+                  slug
+                }
+              }
+            }
+          `,
+        },
+        {
+          indexUid: 'allianzfoundationde',
+          transformer: (data) =>
+            data.allStrapiAbout.nodes.map((node, index) => ({
+              title: index,
+              description: index,
+              slug: index,
+              ...node,
+            })),
+          query: `
+            query MyQuery {
+              allStrapiAbout(filter: {locale: {eq: "de"}}) {
                 nodes {
                   id
                   title
@@ -109,6 +197,46 @@ module.exports = {
         useLangKeyLayout: true,
         prefixDefault: false,
       }
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          query MyQuery {
+            site: strapiGlobal(locale: {eq: "en"}) {
+              locale
+              siteName
+              siteDescription
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allStrapiArticle } }) => {
+              return allStrapiArticle.nodes.map(node => {
+                return Object.assign({}, {
+                  description: node.description,
+                  title: node.title,
+                  url: encodeURI(`https://allianzfoundationfrontend.gatsbyjs.io/` + node.slug),
+                })
+              })
+            },
+            query: `
+              {
+                allStrapiArticle(filter: {locale: {eq: "en"}}) {
+                  nodes {
+                    title
+                    description
+                    slug
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "AllianzFoundation RSS",
+          },
+        ],
+      },
     },
   ],
 }
