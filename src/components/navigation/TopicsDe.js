@@ -7,27 +7,27 @@ export default function Topics() {
       <Link to="/de/people" className="people cell medium-4">
         <ul className="menu vertical">
           <li className="text-center">
-            Für<br />
-            starke<br />
-            <span>Menschen</span>
+            For<br />
+            empowered<br />
+            <span>people</span>
           </li>
         </ul>
       </Link>
       <Link to="/de/society" className="society cell medium-4">
         <ul className="menu vertical">
           <li className="text-center">
-            Für<br />
-            offene<br />
-            <span>Gesellschaften</span>
+            For<br />
+            open<br />
+            <span>societies</span>
           </li>
         </ul>
       </Link>
       <Link to="/de/planet" className="planet cell medium-4">
         <ul className="menu vertical">
           <li className="text-center">
-            Für<br />
-            einen lebendingen<br />
-            <span>Planeten</span>
+            For<br />
+            a living<br />
+            <span>planet</span>
           </li>
         </ul>
       </Link>

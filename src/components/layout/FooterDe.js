@@ -25,21 +25,7 @@ const Footer = () => {
         <div className="cell medium-offset-3 medium-2 small-6">
           <nav className="footleft">
             <ul className="menu simple">
-              <li>
-                <Link to="/de/going-local">
-                  Going local
-                </Link>
-              </li>
-              <li>
-                <Link to="/de/news">
-                  News
-                </Link>
-              </li>
-              <li>
-                <Link to="/de/jobs" >
-                  Jobs
-                </Link>
-              </li>
+
             </ul>
           </nav>
         </div>

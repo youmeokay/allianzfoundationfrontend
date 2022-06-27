@@ -21,11 +21,6 @@ function Highlights() {
             Calendar
           </Link>
         </li>
-        <li>
-          <Link to="/de/fellows">
-            Fellows
-          </Link >
-        </li>
       </ul>
       <ul className="menu vertical cell medium-6">
         <li>

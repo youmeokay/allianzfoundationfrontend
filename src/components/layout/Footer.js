@@ -24,23 +24,7 @@ const Footer = () => {
         </div>
         <div className="cell medium-offset-3 medium-2 small-6">
           <nav className="footleft">
-            <ul className="menu simple">
-              <li>
-                <Link to="/going-local">
-                  Going local
-                </Link>
-              </li>
-              <li>
-                <Link to="/news">
-                  News
-                </Link>
-              </li>
-              <li>
-                <Link to="/jobs" >
-                  Jobs
-                </Link>
-              </li>
-            </ul>
+
           </nav>
         </div>
         <div className="cell medium-2 small-6">
@@ -48,7 +32,7 @@ const Footer = () => {
             <ul className="menu simple">
             <li>
               <Link to="/contact">
-                Contact
+                Get in touch
               </Link>
             </li>
               <li>
