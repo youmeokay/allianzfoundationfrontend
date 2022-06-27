@@ -6,155 +6,88 @@ function Hamburger() {
     <section className="hamburger-menu">
       <div className="grid-container full">
         <div className="grid-x align-middle desktop">
-          <div className="cell">
+          <div className="cell medium-10">
             <nav className="hamburger-nav">
               <ul className="menu grid-x hamburger-link">
 
-                <li className="cell medium-3 ham-links">
+                <li className="cell medium-4 ham-links">
                   <Link to="/about">
                     <b>About Us</b>
                   </Link>
                 </li>
 
-                <li className="cell medium-3 ham-links">
-                  <Link to="/hubs">
-                    <b>Hubs</b>
-                  </Link>
-                </li>
-
-                <li className="cell medium-3 ham-links">
+                <li className="cell medium-4 ham-links">
                   <Link to="/people">
                     <b>People</b>
                   </Link>
                 </li>
 
-                <li className="cell medium-3 ham-links">
-                  <Link to="/funding" >
-                    <b>Funding</b>
-                  </Link>
-                </li>
-
-                <li className="cell medium-3 ham-links">
-                  <></>
-                </li>
-
-                <li className="cell medium-3 ham-links">
-                  <Link to="/study" >
-                    <b>Study</b>
-                  </Link>
-                </li>
-
-                <li className="cell medium-3 ham-links">
-                  <Link to="/planet" >
-                    <b>Planet</b>
-                  </Link>
-                </li>
-
-                <li className="cell medium-3 ham-links">
-                  <Link to="/application" >
-                    <b>Application</b>
-                  </Link>
-                </li>
-
-                <li className="cell medium-3 ham-links">
-                  <></>
-                </li>
-
-                <li className="cell medium-3 ham-links">
+                <li className="cell medium-4 ham-links">
                   <Link to="/fellows" >
                     <b>Fellows</b>
                   </Link>
                 </li>
 
-                <li className="cell medium-3 ham-links">
+                <li className="cell medium-4 ham-links">
+                  <Link to="/apply" >
+                    <b>Apply</b>
+                  </Link>
+                </li>
+
+                <li className="cell medium-4 ham-links">
                   <Link to="/society" >
                     <b>Society</b>
                   </Link>
                 </li>
 
-                <li className="cell medium-3 ham-links">
+                <li className="cell medium-4 ham-links">
+                  <Link to="/hubs">
+                    <b>Hubs</b>
+                  </Link>
+                </li>
+
+                <li className="cell medium-4 ham-links">
                   <Link to="/calendar" >
                     <b>Calendar</b>
                   </Link>
                 </li>
 
-                <li className="cell"></li>
-                <li className="cell"></li>
-                <li className="cell"></li>
-                <li className="cell"></li>
-                <li className="cell"></li>
-                <li className="cell"></li>
-                <li className="cell"></li>
-                <li className="cell"></li>
-                <li className="cell"></li>
-
-                <li className="cell medium-3 ham-links subpriority">
-                  <></>
-                </li>
-
-                <li className="cell medium-3 ham-links subpriority">
-                  <Link to="/news" >
-                    News
+                <li className="cell medium-4 ham-links">
+                  <Link to="/planet" >
+                    <b>Planet</b>
                   </Link>
                 </li>
 
-                <li className="cell medium-3 ham-links subpriority">
+                <li className="cell medium-4 ham-links">
+                  <Link to="/study" >
+                    <b>Study</b>
+                  </Link>
+                </li>
+
+
+                <li className="cell"></li>
+                <li className="cell"></li>
+                <li className="cell"></li>
+                <li className="cell"></li>
+
+                <li className="cell medium-4 ham-links subpriority">
                   <Link to="/risktaker" >
                     Risktaker
                   </Link>
                 </li>
 
-                <li className="cell medium-3 ham-links subpriority">
-                  <Link to="/newsletter" >
-                    Newsletter
+                <li className="cell medium-4 ham-links subpriority">
+                  <Link to="/press" >
+                    Press
                   </Link>
                 </li>
 
-                <li className="cell medium-3 ham-links subpriority">
-                  <></>
-                </li>
-
-                <li className="cell medium-3 ham-links subpriority">
-                  <Link to="/calls" >
-                    Calls
-                  </Link>
-                </li>
-
-                <li className="cell medium-3 ham-links subpriority">
-                  <Link to="/europe" >
-                    Europe
-                  </Link>
-                </li>
-
-
-                <li className="cell medium-3 ham-links subpriority">
-                  <Link to="/going-local" >
-                    Going local
-                  </Link>
-                </li>
-
-                <li className="cell medium-3 ham-links subpriority">
-                  <></>
-                </li>
-
-
-                <li className="cell medium-3 ham-links subpriority">
-                  <Link to="/jobs" >
-                    Jobs
-                  </Link>
-                </li>
-
-                <li className="cell medium-3 ham-links subpriority">
-                  <Link to="/culture" >
-                    Culture
-                  </Link>
-                </li>
-
-                <li className="cell medium-3 ham-links subpriority">
+                <li className="cell medium-4 ham-links subpriority">
                   <Link to="/contact" >
                     Get in touch
                   </Link>
                 </li>
+
               </ul>
             </nav>
           </div>
@@ -163,160 +96,88 @@ function Hamburger() {
           <div className="cell">
             <nav className="mobile-nav grid-x">
 
-              <ul className="menu hamburger-link cell">
+            <ul className="menu grid-x hamburger-link">
 
-                <li className="ham-links cell">
-                  <Link to="/about">
-                    <b>About Us</b>
-                  </Link>
-                </li>
+              <li className="cell small-6 ham-links">
+                <Link to="/about">
+                  <b>About Us</b>
+                </Link>
+              </li>
 
-                <li className="ham-links cell"></li>
+              <li className="cell small-6 ham-links">
+                <Link to="/people">
+                  <b>People</b>
+                </Link>
+              </li>
 
-                <li className="ham-links cell"></li>
+              <li className="cell small-6 ham-links">
+                <Link to="/fellows" >
+                  <b>Fellows</b>
+                </Link>
+              </li>
 
-              </ul>
+              <li className="cell small-6 ham-links">
+                <Link to="/apply" >
+                  <b>Apply</b>
+                </Link>
+              </li>
 
-              <ul className="menu hamburger-link cell small-4">
+              <li className="cell small-6 ham-links">
+                <Link to="/society" >
+                  <b>Society</b>
+                </Link>
+              </li>
 
-                <li className="ham-links cell">
-                  <Link to="/hubs">
-                    <b>Hubs</b>
-                  </Link>
-                </li>
+              <li className="cell small-6 ham-links">
+                <Link to="/hubs">
+                  <b>Hubs</b>
+                </Link>
+              </li>
 
-                <li className="ham-links cell">
-                  <Link to="/study">
-                    <b>Study</b>
-                  </Link>
-                </li>
+              <li className="cell small-6 ham-links">
+                <Link to="/calendar" >
+                  <b>Calendar</b>
+                </Link>
+              </li>
 
-                <li className="ham-links cell">
-                  <Link to="/fellows">
-                    <b>Fellows</b>
-                  </Link>
-                </li>
+              <li className="cell small-6 ham-links">
+                <Link to="/planet" >
+                  <b>Planet</b>
+                </Link>
+              </li>
 
-              </ul>
+              <li className="cell small-6 ham-links">
+                <Link to="/study" >
+                  <b>Study</b>
+                </Link>
+              </li>
 
-              <ul className="menu hamburger-link cell small-4">
 
+              <li className="cell"></li>
+              <li className="cell"></li>
+              <li className="cell"></li>
+              <li className="cell"></li>
 
-                <li className="ham-links cell">
-                  <Link to="/people">
-                    <b>People</b>
-                  </Link>
-                </li>
+              <li className="cell small-6 ham-links subpriority">
+                <Link to="/risktaker" >
+                  Risktaker
+                </Link>
+              </li>
 
-                <li className="ham-links cell">
-                  <Link to="/planet">
-                    <b>Planet</b>
-                  </Link>
-                </li>
+              <li className="cell small-6 ham-links subpriority">
+                <Link to="/press" >
+                  Press
+                </Link>
+              </li>
 
-                <li className="ham-links cell">
-                  <Link to="/society">
-                    <b>Society</b>
-                  </Link>
-                </li>
+              <li className="cell small-6 ham-links subpriority">
+                <Link to="/contact" >
+                  Get in touch
+                </Link>
+              </li>
 
-              </ul>
+            </ul>
 
-              <ul className="menu hamburger-link cell small-4">
-
-                <li className="ham-links cell">
-                  <Link to="/funding">
-                    <b>Funding</b>
-                  </Link>
-                </li>
-
-                <li className="ham-links cell">
-                  <Link to="/application">
-                    <b>Application</b>
-                  </Link>
-                </li>
-
-                <li className="ham-links cell">
-                  <Link to="/calendar">
-                    <b>Calendar</b>
-                  </Link>
-                </li>
-
-              </ul>
-
-              <ul className="menu hamburger-link cell">
-
-                <li className="ham-links cell"></li>
-                <li className="ham-links cell"></li>
-                <li className="ham-links cell"></li>
-
-              </ul>
-
-              <ul className="menu hamburger-link cell small-4">
-
-                <li className="ham-links cell">
-                  <Link to="/news">
-                    News
-                  </Link>
-                </li>
-
-                <li className="ham-links cell">
-                  <Link to="/calls">
-                    Calls
-                  </Link>
-                </li>
-
-                <li className="ham-links cell">
-                  <Link to="/jobs">
-                    Jobs
-                  </Link>
-                </li>
-
-              </ul>
-
-              <ul className="menu hamburger-link cell small-4">
-
-                <li className="ham-links cell">
-                  <Link to="/risktaker">
-                    Risktaker
-                  </Link>
-                </li>
-
-                <li className="ham-links cell">
-                  <Link to="/europe">
-                    Europe
-                  </Link>
-                </li>
-
-                <li className="ham-links cell">
-                  <Link to="/culture">
-                    Culture
-                  </Link>
-                </li>
-
-              </ul>
-
-              <ul className="menu hamburger-link cell small-4">
-
-                <li className="ham-links cell">
-                  <Link to="/newsletter">
-                    Newsletter
-                  </Link>
-                </li>
-
-                <li className="ham-links cell">
-                  <Link to="/goinglocal">
-                    Going local
-                  </Link>
-                </li>
-
-                <li className="ham-links cell">
-                  <Link to="/contact">
-                    Get in touch
-                  </Link>
-                </li>
-
-              </ul>
 
             </nav>
           </div>

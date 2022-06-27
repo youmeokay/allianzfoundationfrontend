@@ -8,17 +8,17 @@ function Highlights() {
       <ul className="menu vertical cell medium-6">
         <li>
           <Link to="/de/about">
-            About Uns
+            About Us
           </Link>
         </li>
         <li>
-          <Link to="/de/hubs">
-            Hubs
+          <Link to="/de/apply">
+            Apply
           </Link>
         </li>
         <li>
-          <Link to="/de/study">
-            Study
+          <Link to="/de/calendar">
+            Calendar
           </Link>
         </li>
         <li>
@@ -29,18 +29,18 @@ function Highlights() {
       </ul>
       <ul className="menu vertical cell medium-6">
         <li>
-          <Link to="/de/funding">
-            Funding
+          <Link to="/de/fellows">
+            Fellows
+          </Link >
+        </li>
+        <li>
+          <Link to="/de/hubs">
+            Hubs
           </Link>
         </li>
         <li>
-          <Link to="/de/application">
-            Application
-          </Link>
-        </li>
-        <li>
-          <Link to="/de/calendar">
-            Kalender
+          <Link to="/de/study">
+            Study
           </Link>
         </li>
       </ul>

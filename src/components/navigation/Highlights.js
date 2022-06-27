@@ -12,6 +12,23 @@ function Highlights() {
           </Link>
         </li>
         <li>
+          <Link to="/apply">
+            Apply
+          </Link>
+        </li>
+        <li>
+          <Link to="/calendar">
+            Calendar
+          </Link>
+        </li>
+      </ul>
+      <ul className="menu vertical cell medium-6">
+        <li>
+          <Link to="/fellows">
+            Fellows
+          </Link >
+        </li>
+        <li>
           <Link to="/hubs">
             Hubs
           </Link>
@@ -19,28 +36,6 @@ function Highlights() {
         <li>
           <Link to="/study">
             Study
-          </Link>
-        </li>
-        <li>
-          <Link to="/fellows">
-            Fellows
-          </Link >
-        </li>
-      </ul>
-      <ul className="menu vertical cell medium-6">
-        <li>
-          <Link to="/funding">
-            Funding
-          </Link>
-        </li>
-        <li>
-          <Link to="/application">
-            Application
-          </Link>
-        </li>
-        <li>
-          <Link to="/calendar">
-            Calendar
           </Link>
         </li>
       </ul>

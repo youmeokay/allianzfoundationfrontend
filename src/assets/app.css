@@ -320,6 +320,7 @@
 * ***/
 
   .highlight-the-hamburger {
+    cursor: pointer;
     position: absolute; height: 60px;
     top: 0; right:0; padding-right: calc(var(--padding) * .5);}
   .highlight-the-hamburger.open {
@@ -941,7 +942,6 @@
 * ***/
 
   .highlight {
-    cursor: none !important;
     padding: calc(var(--padding) * 1);
     position: relative;
     box-shadow: inset 0 0 0 4px #000;

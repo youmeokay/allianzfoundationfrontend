@@ -1,7 +1,5 @@
 import ScrollReveal from "scrollreveal"
 import React, { useEffect, useState } from "react"
-import loadable from '@loadable/component'
-const AnimatedCursors = loadable(() => import('./../helpers/Cursor'))
 
 const Layout = ({ children }) => {
 
@@ -55,17 +53,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="allianz-foundation">
-      <div className="inner">
-        {children}
-      </div>
-      <AnimatedCursors
-         innerSize={18}
-         outerSize={18}
-         color='0, 0, 0'
-         outerAlpha={0}
-         innerScale={1}
-         outerScale={0}
-       />
+      {children}
     </div>
   )
 }
