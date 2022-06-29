@@ -95,21 +95,17 @@ const TagPage = ({ data }) => {
   const seo = {metaTitle: tag.name, metaDescription: tag.description}
 
   const isPeople = tag.slug.startsWith("people")
-  const isPeopleDe = tag.slug.startsWith("menschen")
-
   const isSociety = tag.slug.startsWith("society")
   const isPlanet = tag.slug.startsWith("planet")
-
   const isHub = tag.slug.startsWith("hubs")
   const isFellow = tag.slug.startsWith("fellow")
   const isStudy = tag.slug.startsWith("study")
-  const isFunding = tag.slug.startsWith("funding")
-  const isCall = tag.slug.startsWith("call")
+  const isApply = tag.slug.startsWith("apply")
   const isNews = tag.slug.startsWith("news")
   const isCalendar = tag.slug.startsWith("calendar")
   const isRisktaker = tag.slug.startsWith("risktaker")
-  const isEurope = tag.slug.startsWith("europe")
-  const isCulture = tag.slug.startsWith("culture")
+  const isArts = tag.slug.startsWith("arts")
+  const isEnv = tag.slug.startsWith("environment")
 
   if (isPeople) {
     return (
@@ -453,64 +449,7 @@ const TagPage = ({ data }) => {
       </Layout>
     )
   }
-  if (isFunding) {
-    return (
-      <Layout as="article">
-      <Helmet bodyAttributes={{class: `${tag.name}`}}/>
-        <Seo seo={seo} />
-        <HamburgerDe />
-        <header className={`main header ${
-              small ? "small" : ""
-            }`}>
-            <Link to="/de/" className="logo-link">
-              <h1 className="text-logo">
-                Allianz<br />
-                <span>Foundation</span>
-                <span className="addon hubs">Hubs</span>
-                <span className="addon study">Study</span>
-                <span className="addon fellows">Fellows</span>
-              </h1>
-            </Link>
-            <nav className="language">
-              <ul className="menu simple language-selector">
-                {tag.localizations.map((tag) => (
-                  <li>
-                    <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            <Link to="/de/search" className="search-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
-            </Link>
-            <nav className="highlight-the-hamburger">
-              <div className="hamburger">
-                <div></div>
-              </div>
-            </nav>
-        </header>
-        <div className="all-modules">
-          <AllModules modules={tag.modules || []} />
-          <section className="tag-feed">
-            <article className="grid-container full">
-              <div className="grid-x grid-margin-x">
-                <div className="cell">
-                  <Feeds articles={data.funding.nodes} />
-                </div>
-              </div>
-            </article>
-          </section>
-          <section className="list-feed">
-            <article className="grid-container full">
-              <FeedsList articles={data.fundinglist.nodes} />
-            </article>
-          </section>
-        </div>
-        <FooterDe />
-      </Layout>
-    )
-  }
-  if (isCall) {
+  if (isApply) {
     return (
       <Layout as="article">
       <Helmet bodyAttributes={{class: `${tag.name}`}}/>
@@ -681,12 +620,12 @@ const TagPage = ({ data }) => {
     return (
         <Layout as="article">
         <Helmet bodyAttributes={{class: `${tag.name}`}}/>
+        <Hamburger />
           <Seo seo={seo} />
-          <HamburgerDe />
           <header className={`main header ${
                 small ? "small" : ""
               }`}>
-              <Link to="/de/" className="logo-link">
+              <Link to="/" className="logo-link">
                 <h1 className="text-logo">
                   Allianz<br />
                   <span>Foundation</span>
@@ -704,7 +643,7 @@ const TagPage = ({ data }) => {
                   ))}
                 </ul>
               </nav>
-              <Link to="/de/search" className="search-icon">
+              <Link to="/search" className="search-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
               </Link>
               <nav className="highlight-the-hamburger">
@@ -724,13 +663,8 @@ const TagPage = ({ data }) => {
                 </div>
               </article>
             </section>
-            <section className="list-feed">
-              <article className="grid-container full">
-                <FeedsList articles={data.risktakerlist.nodes} />
-              </article>
-            </section>
           </div>
-          <FooterDe />
+          <Footer />
         </Layout>
       )
   }
@@ -738,12 +672,12 @@ const TagPage = ({ data }) => {
     return (
         <Layout as="article">
         <Helmet bodyAttributes={{class: `${tag.name}`}}/>
+        <Hamburger />
           <Seo seo={seo} />
-          <HamburgerDe />
           <header className={`main header ${
                 small ? "small" : ""
               }`}>
-              <Link to="/de/" className="logo-link">
+              <Link to="/" className="logo-link">
                 <h1 className="text-logo">
                   Allianz<br />
                   <span>Foundation</span>
@@ -761,7 +695,7 @@ const TagPage = ({ data }) => {
                   ))}
                 </ul>
               </nav>
-              <Link to="/de/search" className="search-icon">
+              <Link to="/search" className="search-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
               </Link>
               <nav className="highlight-the-hamburger">
@@ -781,26 +715,21 @@ const TagPage = ({ data }) => {
                 </div>
               </article>
             </section>
-            <section className="list-feed">
-              <article className="grid-container full">
-                <FeedsList articles={data.europelist.nodes} />
-              </article>
-            </section>
           </div>
-          <FooterDe />
+          <Footer />
         </Layout>
       )
   }
-  if (isCulture) {
+  if (isArts) {
     return (
         <Layout as="article">
         <Helmet bodyAttributes={{class: `${tag.name}`}}/>
+        <Hamburger />
           <Seo seo={seo} />
-          <HamburgerDe />
           <header className={`main header ${
                 small ? "small" : ""
               }`}>
-              <Link to="/de/" className="logo-link">
+              <Link to="/" className="logo-link">
                 <h1 className="text-logo">
                   Allianz<br />
                   <span>Foundation</span>
@@ -818,7 +747,7 @@ const TagPage = ({ data }) => {
                   ))}
                 </ul>
               </nav>
-              <Link to="/de/search" className="search-icon">
+              <Link to="/search" className="search-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
               </Link>
               <nav className="highlight-the-hamburger">
@@ -838,13 +767,60 @@ const TagPage = ({ data }) => {
                 </div>
               </article>
             </section>
-            <section className="list-feed">
+          </div>
+          <Footer />
+        </Layout>
+      )
+  }
+  if (isEnv) {
+    return (
+        <Layout as="article">
+        <Helmet bodyAttributes={{class: `${tag.name}`}}/>
+        <Hamburger />
+          <Seo seo={seo} />
+          <header className={`main header ${
+                small ? "small" : ""
+              }`}>
+              <Link to="/" className="logo-link">
+                <h1 className="text-logo">
+                  Allianz<br />
+                  <span>Foundation</span>
+                  <span className="addon hubs">Hubs</span>
+                  <span className="addon study">Study</span>
+                  <span className="addon fellows">Fellows</span>
+                </h1>
+              </Link>
+              <nav className="language">
+                <ul className="menu simple language-selector">
+                  {tag.localizations.map((tag) => (
+                    <li>
+                      <Link to={`/${tag.slug}`} className="lang-link">EN</Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <Link to="/search" className="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
+              </Link>
+              <nav className="highlight-the-hamburger">
+                <div className="hamburger">
+                  <div></div>
+                </div>
+              </nav>
+          </header>
+          <div className="all-modules">
+            <AllModules modules={tag.modules || []} />
+            <section className="tag-feed">
               <article className="grid-container full">
-                <FeedsList articles={data.culturelist.nodes} />
+                <div className="grid-x grid-margin-x">
+                  <div className="cell">
+                    <Feeds articles={data.env.nodes} />
+                  </div>
+                </div>
               </article>
             </section>
           </div>
-          <FooterDe />
+          <Footer />
         </Layout>
       )
   }
@@ -1099,7 +1075,7 @@ export const pageQuery = graphql`
     }
    }
    peopletiles: allStrapiArticle(
-     filter: {options: {eq: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
+     filter: {options: {eq: "Apply"} tags: {elemMatch: {slug: {eq: $slug}}}
      locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1111,7 +1087,7 @@ export const pageQuery = graphql`
     }
    }
    peoplelist: allStrapiArticle(
-     filter: {options: {ne: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
+     filter: {options: {ne: "Apply"} tags: {elemMatch: {slug: {eq: $slug}}}
      locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1123,7 +1099,7 @@ export const pageQuery = graphql`
     }
    }
    societytiles: allStrapiArticle(
-     filter: {options: {eq: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
+     filter: {options: {eq: "Apply"} tags: {elemMatch: {slug: {eq: $slug}}}
      locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1135,7 +1111,7 @@ export const pageQuery = graphql`
     }
    }
    societylist: allStrapiArticle(
-     filter: {options: {ne: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
+     filter: {options: {ne: "Apply"} tags: {elemMatch: {slug: {eq: $slug}}}
      locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1147,7 +1123,7 @@ export const pageQuery = graphql`
     }
    }
    planettiles: allStrapiArticle(
-     filter: {options: {eq: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
+     filter: {options: {eq: "Apply"} tags: {elemMatch: {slug: {eq: $slug}}}
      locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1159,7 +1135,7 @@ export const pageQuery = graphql`
     }
    }
    planetlist: allStrapiArticle(
-     filter: {options: {ne: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
+     filter: {options: {ne: "Apply"} tags: {elemMatch: {slug: {eq: $slug}}}
      locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1246,10 +1222,8 @@ export const pageQuery = graphql`
       ...ListCard
     }
    }
-
-
-   funding: allStrapiArticle(
-     filter: {options: {eq: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
+   apply: allStrapiArticle(
+     filter: {options: {eq: "Apply"} tags: {elemMatch: {slug: {eq: $slug}}}
     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1260,8 +1234,8 @@ export const pageQuery = graphql`
       ...ArticleCard
     }
    }
-   fundinglist: allStrapiArticle(
-     filter: {options: {ne: "Funding"} tags: {elemMatch: {slug: {eq: $slug}}}
+   applylist: allStrapiArticle(
+     filter: {options: {ne: "Apply"} tags: {elemMatch: {slug: {eq: $slug}}}
     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1272,33 +1246,6 @@ export const pageQuery = graphql`
       ...ListCard
     }
    }
-
-   calls: allStrapiArticle(
-     filter: {options: {eq: "Call"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "de"}}
-     sort: {
-       fields: [updatedAt],
-       order: DESC
-     }
-   ) {
-    nodes {
-      ...ArticleCard
-    }
-   }
-   calllist: allStrapiArticle(
-     filter: {options: {ne: "Call"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "de"}}
-     sort: {
-       fields: [updatedAt],
-       order: DESC
-     }
-   ) {
-    nodes {
-      ...ListCard
-    }
-   }
-
-
    news: allStrapiArticle(
      filter: {options: {eq: "News"} tags: {elemMatch: {slug: {eq: $slug}}}
     locale: {eq: "de"}}
@@ -1349,10 +1296,8 @@ export const pageQuery = graphql`
       ...CalendarCardList
     }
    }
-
-
    risktaker: allStrapiArticle(
-     filter: {options: {eq: "Risktaker"} tags: {elemMatch: {slug: {eq: $slug}}}
+     filter: {tags: {elemMatch: {slug: {eq: $slug}}}
     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1363,22 +1308,8 @@ export const pageQuery = graphql`
       ...ArticleCard
     }
    }
-   risktakerlist: allStrapiArticle(
-     filter: {options: {ne: "Risktaker"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "de"}}
-     sort: {
-       fields: [updatedAt],
-       order: DESC
-     }
-   ) {
-    nodes {
-      ...ListCard
-    }
-   }
-
-
    europe: allStrapiArticle(
-     filter: {options: {eq: "europe"} tags: {elemMatch: {slug: {eq: $slug}}}
+     filter: {tags: {elemMatch: {slug: {eq: $slug}}}
     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1389,22 +1320,8 @@ export const pageQuery = graphql`
       ...ArticleCard
     }
    }
-   europelist: allStrapiArticle(
-     filter: {options: {ne: "Europe"} tags: {elemMatch: {slug: {eq: $slug}}}
-    locale: {eq: "de"}}
-     sort: {
-       fields: [updatedAt],
-       order: DESC
-     }
-   ) {
-    nodes {
-      ...ListCard
-    }
-   }
-
-
-   culture: allStrapiArticle(
-     filter: {options: {eq: "culture"} tags: {elemMatch: {slug: {eq: $slug}}}
+   arts: allStrapiArticle(
+     filter: {tags: {elemMatch: {slug: {eq: $slug}}}
     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1415,8 +1332,8 @@ export const pageQuery = graphql`
       ...ArticleCard
     }
    }
-   culturelist: allStrapiArticle(
-     filter: {options: {ne: "Culture"} tags: {elemMatch: {slug: {eq: $slug}}}
+   env: allStrapiArticle(
+     filter: {tags: {elemMatch: {slug: {eq: $slug}}}
     locale: {eq: "de"}}
      sort: {
        fields: [updatedAt],
@@ -1424,11 +1341,9 @@ export const pageQuery = graphql`
      }
    ) {
     nodes {
-      ...ListCard
+      ...ArticleCard
     }
    }
-
-
   }
 `
 

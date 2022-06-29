@@ -71,8 +71,8 @@ function Hamburger() {
                 <li className="cell"></li>
 
                 <li className="cell medium-4 ham-links subpriority">
-                  <Link to="/risktaker" >
-                    Risktaker
+                  <Link to="/newsletter" >
+                    Newsletter
                   </Link>
                 </li>
 
@@ -159,7 +159,7 @@ function Hamburger() {
               <li className="cell"></li>
 
               <li className="cell small-6 ham-links subpriority">
-                <Link to="/risktaker" >
+                <Link to="/risktakers" >
                   Risktaker
                 </Link>
               </li>
