@@ -24,15 +24,14 @@ const ArticlePage = ({ data }) => {
   const article = data.strapiArticle
   const calendar = data.calendar
   const calendarlist = data.calendarlist
-  const callfeed = data.callfeed
-  const callfeedlist = data.callfeedlist
+  const apply = data.apply
+  const applylist = data.applylist
 
   const isVideo = article.cover.mime.startsWith("video")
   const isFullscreen = article.layout.startsWith("FullScreen")
   const isEvent = article.options.startsWith("Event")
-  const isCall = article.options.startsWith("Call")
+  const isApply = article.options.startsWith("Apply")
   const isNews = article.options.startsWith("News")
-
   const hasIntl = data.strapiArticle.localizations
 
   const seo = {
@@ -534,21 +533,20 @@ const ArticlePage = ({ data }) => {
         ) : (
         <></>
       )}
-      {isCall ? (
+      {isApply ? (
         <div className="extra-feeds">
           <section className="tag-feed">
             <article className="grid-container full">
               <div className="grid-x grid-margin-x">
                 <div className="cell">
-                  <CallFeed articles={data.callfeed.nodes} />
+                  <CallFeed articles={data.apply.nodes} />
                 </div>
               </div>
             </article>
           </section>
           <section className="list-feed">
             <article className="grid-container full">
-              <CallFeedList articles={data.callfeedlist.nodes} />
-              <CallFeedList articles={data.fundinglist.nodes} />
+              <CallFeedList articles={data.applylist.nodes} />
               <CallFeedList articles={data.fellowslist.nodes} />
             </article>
           </section>
@@ -603,26 +601,6 @@ export const pageQuery = graphql`
        ...CalendarCardList
      }
     }
-    fundinglist: allStrapiArticle(
-      filter: {
-        locale: {eq: "en"}
-        tags: {
-          elemMatch: {
-            slug: {eq: "funding"}
-          }
-        }
-        options: {
-          ne: "Call"
-        }
-        slug: {
-          ne: $slug
-        }
-      }
-    ) {
-     nodes {
-       ...ListCard
-     }
-    }
     fellowslist: allStrapiArticle(
       filter: {
         locale: {eq: "en"}
@@ -643,16 +621,16 @@ export const pageQuery = graphql`
        ...ListCard
      }
     }
-    callfeed: allStrapiArticle(
+    applyfeed: allStrapiArticle(
       filter: {
         locale: {eq: "en"}
         tags: {
           elemMatch: {
-            slug: {eq: "calls"}
+            slug: {eq: "apply"}
           }
         }
         options: {
-          eq: "Call"
+          eq: "Apply"
         }
         slug: {
           ne: $slug
@@ -663,16 +641,16 @@ export const pageQuery = graphql`
        ...ArticleCard
      }
     }
-    callfeedlist: allStrapiArticle(
+    applylist: allStrapiArticle(
       filter: {
         locale: {eq: "en"}
         tags: {
           elemMatch: {
-            slug: {eq: "calls"}
+            slug: {eq: "apply"}
           }
         }
         options: {
-          ne: "Call"
+          ne: "Apply"
         }
         slug: {
           ne: $slug

@@ -24,8 +24,8 @@ const ArticlePage = ({ data }) => {
   const article = data.strapiArticle
   const calendar = data.calendar
   const calendarlist = data.calendarlist
-  const callfeed = data.callfeed
-  const callfeedlist = data.callfeedlist
+  const apply = data.apply
+  const applylist = data.applylist
 
   const isVideo = article.cover.mime.startsWith("video")
   const isFullscreen = article.layout.startsWith("FullScreen")
@@ -540,15 +540,14 @@ const ArticlePage = ({ data }) => {
             <article className="grid-container full">
               <div className="grid-x grid-margin-x">
                 <div className="cell">
-                  <CallFeed articles={data.callfeed.nodes} />
+                  <CallFeed articles={data.apply.nodes} />
                 </div>
               </div>
             </article>
           </section>
           <section className="list-feed">
             <article className="grid-container full">
-              <CallFeedList articles={data.callfeedlist.nodes} />
-              <CallFeedList articles={data.fundinglist.nodes} />
+              <CallFeedList articles={data.applylist.nodes} />
               <CallFeedList articles={data.fellowslist.nodes} />
             </article>
           </section>
@@ -643,16 +642,16 @@ export const pageQuery = graphql`
        ...ListCard
      }
     }
-    callfeed: allStrapiArticle(
+    apply: allStrapiArticle(
       filter: {
         locale: {eq: "de"}
         tags: {
           elemMatch: {
-            slug: {eq: "calls"}
+            slug: {eq: "apply"}
           }
         }
         options: {
-          eq: "Call"
+          eq: "Apply"
         }
         slug: {
           ne: $slug
@@ -663,16 +662,16 @@ export const pageQuery = graphql`
        ...ArticleCard
      }
     }
-    callfeedlist: allStrapiArticle(
+    applylist: allStrapiArticle(
       filter: {
         locale: {eq: "de"}
         tags: {
           elemMatch: {
-            slug: {eq: "calls"}
+            slug: {eq: "apply"}
           }
         }
         options: {
-          ne: "Call"
+          ne: "Apply"
         }
         slug: {
           ne: $slug
