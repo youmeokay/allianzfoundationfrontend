@@ -181,7 +181,7 @@ module.exports = {
         singleTypes: ['about', 'global', 'index', 'contact', 'goinglocal', 'imprint', 'newsletter', 'jobs', 'presse', 'privacy'],
         locale: ['en','de'],
         preview: true,
-        cache: false,
+        cache: true,
       },
     },
     "gatsby-plugin-image",
